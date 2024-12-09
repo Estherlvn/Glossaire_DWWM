@@ -13,7 +13,8 @@
 - [English](#english)
 
 ## Général
-1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte. Exécuter un script PHP : mettre en place un environnement qui comprend l’installation d’un logiciel comme Laragon ou WampServer.
+1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte.
+- Exécuter un script PHP : mettre en place un environnement qui comprend l’installation d’un logiciel comme Laragon ou WampServer.
 Dans un contexte de développement web, ces deux plateformes sont adaptées à Windows et regroupent les outils nécessaires à l'exécution d’un script PHP :
 Serveur web (Apache), Base de données (MySQL) et PHP comme langage de programmation côté serveur.
 2.	Qu’est-ce qu’un algorithme ?
