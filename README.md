@@ -18,16 +18,17 @@
 Dans un contexte de développement web, ces deux plateformes sont adaptées à Windows et regroupent les outils nécessaires à l'exécution d’un script PHP :
 Serveur web (Apache), Base de données (MySQL) et PHP comme langage de programmation côté serveur.
 2.	Qu’est-ce qu’un algorithme ?
-Un algorithme est une série d'instructions que l’on suit pour résoudre un problème ou accomplir une tâche. C’est une liste d’étapes à suivre pour atteindre un résultat.
+- Un algorithme est une série d'instructions que l’on suit pour résoudre un problème ou accomplir une tâche. C’est une liste d’étapes à suivre pour atteindre un résultat.
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
-Une variable est un espace de mémoire/stockage qui comprend un nom, une valeur, et éventuellement un type. Les variables sont utilisées pour stocker des informations qui peuvent changer au cours de l'exécution d'un programme.
+- Une variable est un espace de mémoire/stockage qui comprend un nom, une valeur, et éventuellement un type. Les variables sont utilisées pour stocker des informations qui peuvent changer au cours de l'exécution d'un programme.
 En PHP, une variable est préfixée par le symbole  $  .
 4.	Qu’est-ce que la portée d’une variable ?
-La portée d'une variable est le contexte dans lequel elle est définie, la zone de code où elle a été déclarée. PHP possède une portée de fonction et une portée globale. Toute variable définie en dehors d'une fonction est limitée à la portée globale.
+- La portée d'une variable est le contexte dans lequel elle est définie, la zone de code où elle a été déclarée. PHP possède une portée de fonction et une portée globale. Toute variable définie en dehors d'une fonction est limitée à la portée globale.
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-Une constante est une valeur fixe qui ne change pas durant l'exécution d'un programme. Contrairement à une variable, une fois qu'une constante est définie, sa valeur ne peut pas être modifiée.
+- Une constante est une valeur fixe qui ne change pas durant l'exécution d'un programme. Contrairement à une variable, une fois qu'une constante est définie, sa valeur ne peut pas être modifiée.
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
-Les superglobales sont des variables prédéfinies en PHP :  toujours accessibles quelle que soit leur portée, accessibles depuis n’importe quelle fonction, classe ou fichier et sans manipulation particulière. Il en existe 9 principales :
+- Les superglobales sont des variables prédéfinies en PHP :  toujours accessibles quelle que soit leur portée, accessibles depuis n’importe quelle fonction, classe ou fichier et sans manipulation particulière.
+- Il en existe 9 principales :
 $_GET $_POST $_REQUEST $_SERVER $_FILES $_ENV $_COOKIE $_SESSION $_GLOBALS
 par exemple, dans un fichier d'action, nous pouvons utiliser la $_GET variable pour collecter la valeur des champs de saisie :
 <html>
@@ -37,7 +38,7 @@ Your email address is: <?php echo $_GET["email"]; ?>
 </body>
 </html>
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
- Les types primitifs associables à une variable en PHP :
+- Les types primitifs associables à une variable en PHP :
 Integer : Nombres entiers, 25
 Float : Nombres réels, 3.14
 String : Chaînes de caractères, "Bonjour"
@@ -47,7 +48,7 @@ par exemple array(1, 2, 3) ou array("nom" => "Alice")
 Object : Instances de classes définies par l'utilisateur
 NULL : Absence de valeur, par exemple NULL
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
-Il existe plusieurs types de tableaux en PHP : 
+- Il existe plusieurs types de tableaux en PHP : 
 Tableaux indexés : utilisent des indices numériques
 Tableaux associatifs : utilisent des clés personnalisées
 (généralement des chaînes de caractères)
@@ -55,7 +56,7 @@ Tableaux multidimensionnels : contiennent des tableaux imbriqués à l'intérieu
 Tableaux vides : ne contiennent pas d’élément, mais peuvent être remplis
 Tableaux mixtes : combinent des indices numériques et des clés associatives
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
-Il existe 5 principales structures de contrôle en algorithmie :
+- Il existe 5 principales structures de contrôle en algorithmie :
 Structure conditionnelle (ou de sélection) :
 Permet de choisir une ou plusieurs actions en fonction de conditions.
 Exemples : if, if-else, switch.
@@ -75,11 +76,11 @@ Permet d’organiser un programme en sous-programmes ou blocs réutilisables
 Exemples : Définition de fonctions ou procédures (par exemple function en PHP).
 
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
- La fonction PHP permettant de demander la longueur d’une chaîne de caractères est strlen().   $length = strlen($string);
+- La fonction PHP permettant de demander la longueur d’une chaîne de caractères est strlen().   $length = strlen($string);
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
-— Une session en PHP permet de conserver des informations (ou des données) pendant la période de navigation de l’utilisateur, et permet de partager des données entre les pages web de manière automatique.
+- Une session en PHP permet de conserver des informations (ou des données) pendant la période de navigation de l’utilisateur, et permet de partager des données entre les pages web de manière automatique.
 essentiel pour gérer des fonctionnalités comme la connexion d'un utilisateur ou le suivi d'un panier d'achats.
-— La fonction session_start() est utilisée pour démarrer une session.
+- La fonction session_start() est utilisée pour démarrer une session.
 Elle doit être appelée au tout début de la page; avant toute sortie envoyée au navigateur.
 Démarrage d’une session et stockage des infos dans la variable de session :
 <?php
@@ -96,7 +97,7 @@ Les données de session sont conservées sur le serveur, ce qui est plus sécuri
 Par défaut, les sessions PHP expirent après un certain temps d'inactivité (configurable dans le fichier php.ini).
 
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
-Un cookie est un petit fichier stocké sur le navigateur d'un utilisateur.
+- Un cookie est un petit fichier stocké sur le navigateur d'un utilisateur.
 Il contient des informations sous forme de paires clé-valeur et peut être utilisé pour stocker des données spécifiques à un utilisateur sur un site web.
 Syntaxe de setcookie() :
 setcookie(name, value, expiration, path, domain, secure, httponly);
@@ -114,8 +115,8 @@ echo "Le cookie a été défini !";
 ?>
 
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
-require : inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible.
-include : inclut le contenu d'un autre fichier appelé, mais ne provoque pas d'erreur bloquante s'il est indisponible
+- require : inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible.
+- include : inclut le contenu d'un autre fichier appelé, mais ne provoque pas d'erreur bloquante s'il est indisponible
 
 exemple d’utilisation : 
 <?php require "fichier2.html"; ?>
