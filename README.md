@@ -139,7 +139,7 @@
       header("Location: http://www.example.com");
       exit(); ?>
        ```
-      'ajouter exit() après header() permet d'arrêter l'exécution du script'
+      - ajouter exit() après header() permet d'arrêter l'exécution du script
 
 15. **Définir la partie « front-end
 
