@@ -133,6 +133,13 @@
       ```
 
 14. **Comment effectuer une redirection en PHP ?**
+      On peut utiliser la fonction `header()` de la manière suivante :
+      
+      ```php
+      header("Location: http://www.example.com");
+      exit(); ?>
+       ```
+      'ajouter exit() après header() permet d'arrêter l'exécution du script'
 
 15. **Définir la partie « front-end
 
