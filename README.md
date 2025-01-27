@@ -136,22 +136,35 @@
       On peut utiliser la fonction `header()` de la manière suivante :
       
       ```php
-      header("Location: http://www.example.com");
+      header("Location: http://www.homepage.com");
       exit(); ?>
        ```
       - ajouter exit() après header() permet d'arrêter l'exécution du script
 
-15. **Définir la partie « front-end
-
-14.	Comment effectuer une redirection en PHP ?
 15.	Définir la partie « front-end » et « back-end » d’une application
+   - Frontend et backend sont des termes généraux qui regroupent logiquement les différentes technologies et couches logicielles d'une application ou d'un site.
+- La partie front-end s'intéresse à l'interface visible par l'utilisateur, celle avec laquelle il interagit directement.
+- À l'inverse, le back-end est toute la partie dite 'cachée' à l'utilisateur, celle qui gère la logique, les données et l'interaction avec la base de données. c'est grâce au back-end que les informations sont traitées et envoyées au front-end.
+
+- **Front-end** : Partie visible, côté client (interface utilisateur). Techno courantes: **HTML**, **CSS**, **JavaScript**.
+- **Back-end** : Partie cachée, côté serveur (gestion des données et logique métier). Techno courantes:
+  Langages de programmation : **PHP**, **Python**, **Java**, **Ruby**, **Node.js**.
+  Base de données : **MySQL**, **PostgreSQL**, **MongoDB**.
+  Serveurs web : **Apache**, **Nginx**.
+
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 
 ## Front-end
 18.	Définir HTML
+   - Le HTML (Hypertext Markup Language) définit la structure du frontend et les différents éléments du DOM
+
 19.	Définir CSS
+   - Les feuilles de style en cascade (CSS) définissent le style d'une application Web, notamment la mise en page, les polices, les couleurs, le style visuel ainsi que la prise en charge de certaines animations
+
 20.	Définir Javascript
+   - JavaScript est un langage de script. Il ajoute une couche de fonctionnalités dynamiques en manipulant le DOM, il permet de créer et de contrôler des éléments dynamiques, pour rendre la page interactive.
+
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 23.	Qu’est-ce qu’un sélecteur CSS ?
