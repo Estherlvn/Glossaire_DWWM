@@ -213,8 +213,8 @@ Ils permettent notamment de :
 
 
 ## UX UI
-35.	Quelle est la différence entre UX Design et UI Design ? 
-Acronymes pour User Experience et User Interface
+35.	Quelle est la différence entre UX Design et UI Design ?  
+Acronymes pour User Experience et User Interface  
 
 L'**UX Designer** travaille sur l'optimisation et l'amélioration de l'expérience utilisateur.
 Il étudie les parcours possibles des utilisateurs qui se rendent sur des sites ou des applications afin de travailler les points suivants: accessibilité, ergonomie (facilité d'utilisation), cohérence du design, fonctionnalités intuitives.
@@ -225,32 +225,32 @@ Ici, on parle de ce que voit un utilisateur sur son écran lorsqu'il parcourt un
 Il définit une charte graphique, les boutons de navigation, la typographie, etc...
 Il est également responsable de l'image que renvoie le site d'une entreprise, par exemple.
 
-36.	Qu’est-ce qu’un wireframe ? 
+36.	Qu’est-ce qu’un wireframe ?  
 Parmi les étapes de **conception et de maquettage**, on peut considérer que le wireframe est la première représentation visuelle de l'interface utilisateur d'un site web ou d'une application logicielle. Elle peut être précédée par un **Zoning**, une étape de schématisation pour dégrossir l'apparence d'une future page.
 Le **Wireframe** permet de définir l'emplacement et l'organisation des éléments et des formes nécessaires au fonctionnement du site (ou projet). Il permet de représenter l’architecture du site et la façon dont les différentes pages et éléments sont liés entre eux. On ne se concentre pas sur l'aspect du rendu visuel. Le graphisme interviendra plus tard, lors de la phase **Maquette**.
 Les wireframes facilitent le travail d'échange et de réflexion avec le client (ou ses collègues) car il sont facilement modulables et modifiables.
 
-37.	Qu’est-ce qu’un prototype ? 
+37.	Qu’est-ce qu’un prototype ?  
 Un **Prototype** est une représentation dite "fonctionnelle" des interfaces du produit final. Il permet de tester la navigation et les fonctionnalités en intégrant des **éléments d'interactivité** (et non du code réel). Ainsi, il permet de tester le produit pour détecter d'éventuels problèmes d'ergonomie ou d'accessibilité. C'est une étape essentielle avant de passer au développement. Il peut également servir d'outil de présentation et de démarchage dans un cadre commercial.
 
-38.	Qu’est-ce que la hiérarchie visuelle en UI Design ? 
+38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?  
 En **UI Design**, la hiérarchie visuelle permet de respecter l'importance du contenu qui doit être mis en avant sur une page. Ce concept permet de faciliter la recherche d'information et l'accès aux fonctionnalités nécessaires à la **qualité de l'expérience utilisateur**. Pour guider l'utilisateur, on peut construire une page selon des schémas visuels comme le F-Pattern ou le Z-Pattern. Ou au contraire, casser ces schémas selon l'effet voulu. D'autres éléments peuvent intervenir comme la typographie, les espaces blancs, la cohérence des couleurs. La conception mobile requiert une attention particulière car il faut prioriser davantage. A savoir qu'un utilisateur préfère généralement se trouver sur un site qui lui paraît familier, avec une structure reconnaissable.
 
-39.	Qu’est-ce que l’accessibilité en UX Design ? 
+39.	Qu’est-ce que l’accessibilité en UX Design ?  
 En UX Design, l'**accessibilité** est un concept qui consiste en la création de produits numériques qui répond à des critères d'accessibilité, c'est à dire qui peut être utilisé par tous les individus quel que soient leur aptitude physique ou mentale, mais aussi leur infrastructure réseau, leur langue ou leur culture.
 Il s’agit d’une obligation légale en France.
 
-40.	Qu’est-ce qu’une grille de mise en page ? 
+40.	Qu’est-ce qu’une grille de mise en page ?  
 En Design d’interface, une **grille de mise en page** agit comme un cadre servant à organiser les éléments d’une page. Les différentes lignes et colonnes créent des repères et permettent de positionner les éléments. Les grilles apportent structure, harmonie, rythme, et contribuent à respecter la hiérarchisation du contenu.
 Dans un processus de maquettage avec Figma, on peut par exemple utiliser l’outil Layout Grid pour faire apparaître des lignes et des colonnes et ainsi faciliter le design.
 
-41.	Qu’est-ce que la notion d’affordance en UX Design ? 
+41.	Qu’est-ce que la notion d’affordance en UX Design ?  
 En UX Design, la notion d’ **affordance** désigne les propriétés ou les caractéristiques d'un élément qui permettent d’indiquer ce qui peut être fait avec celui-ci.
 Les affordances sont des indices qui donnent une idée de la manière dont les utilisateurs peuvent interagir avec.
 Par exemple, la vue d’un bouton rouge indique un danger ou une action indésirable, tandis qu’un bouton vert se veut plus engageant ou digne de confiance.
 Les icônes doivent également respecter cette notion pour mieux guider l’utilisateur.
 
-42.	Qu’est-ce qu’un « mobile first design » ? 
+42.	Qu’est-ce qu’un « mobile first design » ?  
 Le **Mobile First Design** est une approche qui consiste à concevoir un site en se focalisant d’abord sur sa **version mobile**. Beaucoup de sites sont consultés avec un téléphone mobile, d’où l’importance et son succès auprès des Designers.
 Contrairement au principe de Responsive, cette approche adapte le design pour les écrans larges (tablettes ou ordinateurs) en deuxième intention.
 
