@@ -213,6 +213,17 @@ Ils permettent notamment de :
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
+Acronymes pour User Experience et User Interface
+
+L'**UX Designer** travaille sur l'optimisation et l'amélioration de l'expérience utilisateur.
+Il étudie les parcours possibles des utilisateurs qui se rendent sur des sites ou des applications afin de travailler les points suivants: accessibilité, ergonomie (facilité d'utilisation), cohérence du design, fonctionnalités intuitives.
+Le but est de proposer un produit ou une solution digitale à la fois crédible, intelligente, et compatible sur tous les supports.
+
+L'**UI Designer** quant à lui, se charge de concevoir l'interface, c'est-à-dire le point d'interaction et de communication entre l'homme et la machine.
+Ici, on parle de ce que voit un utilisateur sur son écran lorsqu'il parcourt un site ou une application web. L'UI Designer veille à l'apparence de l'interface dite graphique : l'aspect et l'agencement des différents éléments au service des besoins de l'utilisateur.
+Il définit une charte graphique, les boutons de navigation, la typographie, etc...
+Il est également responsable de l'image que renvoie le site d'une entreprise, par exemple.
+
 36.	Qu’est-ce qu’un wireframe ? 
 37.	Qu’est-ce qu’un prototype ? 
 38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
