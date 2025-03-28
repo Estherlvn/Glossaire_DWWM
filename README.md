@@ -197,62 +197,194 @@ Ils permettent notamment de :
   - Simplification des modèles de données complexes.  
   - Fichiers de configuration et stockage de données.  
   
-22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
-23.	Qu’est-ce qu’un sélecteur CSS ?
-24.	Quelle balise HTML permet de créer un lien hypertexte ?
-25.	Qu’est-ce qu’une requête AJAX ?
-26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
-27.	Définir le responsive design
-28.	Qu’est-ce que le templating ?
-29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
-30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
-31.	Qu’est-ce qu’un « media query » ?
-32.	Qu’est-ce qu’un pseudo élément en CSS ?
-33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
-34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+### 22. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+
+Il est possible d'interpréter du JavaScript côté serveur comme s'il était un langage backend classique (comme PHP ou Python). On peut notamment utiliser **Node.js**, dont l'environnement permet d'exécuter du JavaScript en dehors du navigateur, directement sur un serveur.
+
+---
+
+### 23. Qu’est-ce qu’un sélecteur CSS ?
+
+Les sélecteurs CSS sont des expressions qui permettent de cibler des éléments HTML présents sur une page web pour leur appliquer une règle CSS.
+
+- **Sélecteur de type :**  
+  HTML : `<a>Lien vers le site à cibler</a>`  
+  CSS : `a { color : blue }`
+
+- **Sélecteur de classe :**  
+  HTML : `<p class="introduction">Introduction de l’article</p>`  
+  CSS : `.introduction`
+
+- **Sélecteur d'identifiant :**  
+  HTML : `<nav  id="menu">Menu du site</nav>`  
+  CSS : `#menu`
+
+- **Sélecteur universel :**  
+  CSS : `*`
+
+---
+
+### 24. Quelle balise HTML permet de créer un lien hypertexte ?
+
+La balise HTML qui permet de créer un lien hypertexte est la balise `<a>`.  
+La balise `<a>` seule ne suffit pas. Pour qu'elle fonctionne comme un lien hypertexte, il faut obligatoirement lui ajouter l'attribut `href` qui indique la destination du lien.
+
+**Exemple :** `<a href="https://www.example.com">Cliquez ici</a>`
+
+---
+
+### 25. Qu’est-ce qu’une requête AJAX ?
+
+Une requête **AJAX (Asynchronous JavaScript and XML)** est une technique qui permet de faire des requêtes HTTP (GET, POST, etc.) vers un serveur, de manière asynchrone, sans recharger la page web entière.  
+Cela rend les applications web plus interactives et rapides.
+
+1. JavaScript envoie une requête HTTP vers un serveur.  
+2. Le serveur traite la requête et renvoie une réponse (généralement en JSON, XML, ou HTML).  
+3. JavaScript met à jour une partie de la page web avec les nouvelles données sans recharger toute la page.
+
+---
+
+### 26. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+
+- Pour sélectionner tous les éléments d’une classe spécifique, on utilise le **sélecteur de classe** qui commence par un point (`.`) suivi du nom de la classe.
+- Pour un identifiant spécifique, on utilise le **sélecteur d’identifiant** qui commence par un dièse (`#`) suivi du nom de l'identifiant.
+
+---
+
+### 27. Définir le responsive design
+
+Le **responsive design** désigne une manière de concevoir des sites web (préalablement conçus pour un format desktop) qui deviennent parfaitement adaptés à tous les types et toutes les tailles d'écrans. Cela consiste à rendre un site web accessible et adaptable à tous les appareils (tablettes, smartphones, etc.) de façon automatique grâce à différentes techniques de développement (CSS, media queries, etc.).
+
+---
+
+### 28. Qu’est-ce que le templating ?
+
+Le **templating** permet de créer des pages dynamiques en remplaçant des variables dans un modèle HTML par des données réelles. C'est très pratique pour générer des interfaces personnalisées en fonction d'un utilisateur ou d’un contenu.  
+Cette création de “modèles” permet un processus de création d'un format ou d'une mise en page réutilisable pour présenter des données.
+
+---
+
+### 29. Qu’est-ce qu’une fonction anonyme en Javascript ?
+
+Les **fonctions anonymes** sont des fonctions qui ne possèdent pas de nom. Elles sont souvent utilisées lorsqu’on n’a pas besoin de réutiliser une fonction ailleurs dans le script. Généralement, on utilise les fonctions anonymes lorsqu'elles sont appelées qu’à un seul endroit dans le code.
+
+---
+
+### 30. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+
+Pour ajouter une valeur à un tableau, on utilise la méthode **`push()`**. Cette méthode retourne la longueur du tableau une fois les nouvelles valeurs ajoutées.  
+La méthode `push()` peut prendre plusieurs valeurs comme arguments et accepte autant de valeurs qu’on le souhaite.
+
+---
+
+### 31. Qu’est-ce qu’un « media query » ?
+
+Les **media queries** permettent de définir des règles CSS spécifiques qui s’appliquent uniquement lorsque certaines conditions sont remplies, telles que :
+- La largeur de l'écran (responsive),
+- La résolution,
+- L'orientation (portrait/paysage),
+- Les thèmes et contrastes (clair/sombre).
+
+Elles sont définies à l’intérieur d’une règle `@media` dans une feuille de style CSS. Exemple :
+```css
+@media screen and (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+```
+
+---
+
+### 32. Qu’est-ce qu’un pseudo élément en CSS ?
+
+Les **pseudo-éléments CSS** permettent de cibler une partie spécifique d’un élément HTML pour lui appliquer des styles.  
+Il existe 4 pseudo-éléments recommandés par le W3C :
+- `::first-letter`
+- `::first-line`
+- `::before`
+- `::after`
+
+À ne pas confondre avec les **pseudo-classes** comme `:hover` qui ciblent un état spécifique d’un élément.
+
+---
+
+### 33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalents
+
+**Bootstrap** est un framework CSS (frontend) composé d'un ensemble de fichiers CSS et JavaScript qui contiennent des règles prédéfinies pour créer des composants (boutons, formulaires, navigation, etc.).  
+Les meilleures alternatives à Bootstrap sont **Tailwind CSS** (qui permet de construire des interfaces sur mesure directement dans le HTML) et **UIKit**.
+
+---
+
+### 34. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+
+Les deux méthodes qui peuvent être associées à un formulaire HTML sont : **GET** et **POST**.
+
+- La méthode **GET** envoie les données en les ajoutant directement à l'URL, ce qui les rend visibles et peu sécurisées. Elle est généralement utilisée pour des recherches ou des requêtes simples qui ne nécessitent pas de confidentialité.
+
+- La méthode **POST** envoie les données dans le corps de la requête HTTP, ce qui les rend invisibles dans l’URL. C'est une méthode sécurisée, idéale pour envoyer des informations sensibles, des fichiers ou de grandes quantités de données.
+
 
 
 ## UX UI
-35.	Quelle est la différence entre UX Design et UI Design ?  
-Acronymes pour User Experience et User Interface  
+### 35. Quelle est la différence entre UX Design et UI Design ?  
+Acronymes pour User Experience et User Interface.  
 
-L'**UX Designer** travaille sur l'optimisation et l'amélioration de l'expérience utilisateur.
-Il étudie les parcours possibles des utilisateurs qui se rendent sur des sites ou des applications afin de travailler les points suivants: accessibilité, ergonomie (facilité d'utilisation), cohérence du design, fonctionnalités intuitives.
-Le but est de proposer un produit ou une solution digitale à la fois crédible, intelligente, et compatible sur tous les supports.
+L'**UX Designer** travaille sur l'optimisation et l'amélioration de l'expérience utilisateur.  
+Il étudie les parcours possibles des utilisateurs qui se rendent sur des sites ou des applications afin de travailler les points suivants : accessibilité, ergonomie (facilité d'utilisation), cohérence du design, fonctionnalités intuitives.  
+Le but est de proposer un produit ou une solution digitale à la fois crédible, intelligente, et compatible sur tous les supports.  
 
-L'**UI Designer** quant à lui, se charge de concevoir l'interface, c'est-à-dire le point d'interaction et de communication entre l'homme et la machine.
-Ici, on parle de ce que voit un utilisateur sur son écran lorsqu'il parcourt un site ou une application web. L'UI Designer veille à l'apparence de l'interface dite graphique : l'aspect et l'agencement des différents éléments au service des besoins de l'utilisateur.
-Il définit une charte graphique, les boutons de navigation, la typographie, etc...
-Il est également responsable de l'image que renvoie le site d'une entreprise, par exemple.
+L'**UI Designer**, quant à lui, se charge de concevoir l'interface, c'est-à-dire le point d'interaction et de communication entre l'homme et la machine.  
+Ici, on parle de ce que voit un utilisateur sur son écran lorsqu'il parcourt un site ou une application web. L'UI Designer veille à l'apparence de l'interface dite graphique : l'aspect et l'agencement des différents éléments au service des besoins de l'utilisateur.  
+Il définit une charte graphique, les boutons de navigation, la typographie, etc.  
+Il est également responsable de l'image que renvoie le site d'une entreprise, par exemple.  
 
-36.	Qu’est-ce qu’un wireframe ?  
-Parmi les étapes de **conception et de maquettage**, on peut considérer que le wireframe est la première représentation visuelle de l'interface utilisateur d'un site web ou d'une application logicielle. Elle peut être précédée par un **Zoning**, une étape de schématisation pour dégrossir l'apparence d'une future page.
-Le **Wireframe** permet de définir l'emplacement et l'organisation des éléments et des formes nécessaires au fonctionnement du site (ou projet). Il permet de représenter l’architecture du site et la façon dont les différentes pages et éléments sont liés entre eux. On ne se concentre pas sur l'aspect du rendu visuel. Le graphisme interviendra plus tard, lors de la phase **Maquette**.
-Les wireframes facilitent le travail d'échange et de réflexion avec le client (ou ses collègues) car il sont facilement modulables et modifiables.
+---
 
-37.	Qu’est-ce qu’un prototype ?  
-Un **Prototype** est une représentation dite "fonctionnelle" des interfaces du produit final. Il permet de tester la navigation et les fonctionnalités en intégrant des **éléments d'interactivité** (et non du code réel). Ainsi, il permet de tester le produit pour détecter d'éventuels problèmes d'ergonomie ou d'accessibilité. C'est une étape essentielle avant de passer au développement. Il peut également servir d'outil de présentation et de démarchage dans un cadre commercial.
+### 36. Qu’est-ce qu’un wireframe ?  
+Parmi les étapes de **conception et de maquettage**, on peut considérer que le wireframe est la première représentation visuelle de l'interface utilisateur d'un site web ou d'une application logicielle. Elle peut être précédée par un **Zoning**, une étape de schématisation pour dégrossir l'apparence d'une future page.  
+Le **Wireframe** permet de définir l'emplacement et l'organisation des éléments et des formes nécessaires au fonctionnement du site (ou projet). Il permet de représenter l’architecture du site et la façon dont les différentes pages et éléments sont liés entre eux. On ne se concentre pas sur l'aspect du rendu visuel. Le graphisme interviendra plus tard, lors de la phase **Maquette**.  
+Les wireframes facilitent le travail d'échange et de réflexion avec le client (ou ses collègues) car ils sont facilement modulables et modifiables.  
 
-38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?  
-En **UI Design**, la hiérarchie visuelle permet de respecter l'importance du contenu qui doit être mis en avant sur une page. Ce concept permet de faciliter la recherche d'information et l'accès aux fonctionnalités nécessaires à la **qualité de l'expérience utilisateur**. Pour guider l'utilisateur, on peut construire une page selon des schémas visuels comme le F-Pattern ou le Z-Pattern. Ou au contraire, casser ces schémas selon l'effet voulu. D'autres éléments peuvent intervenir comme la typographie, les espaces blancs, la cohérence des couleurs. La conception mobile requiert une attention particulière car il faut prioriser davantage. A savoir qu'un utilisateur préfère généralement se trouver sur un site qui lui paraît familier, avec une structure reconnaissable.
+---
 
-39.	Qu’est-ce que l’accessibilité en UX Design ?  
-En UX Design, l'**accessibilité** est un concept qui consiste en la création de produits numériques qui répond à des critères d'accessibilité, c'est à dire qui peut être utilisé par tous les individus quel que soient leur aptitude physique ou mentale, mais aussi leur infrastructure réseau, leur langue ou leur culture.
-Il s’agit d’une obligation légale en France.
+### 37. Qu’est-ce qu’un prototype ?  
+Un **Prototype** est une représentation dite "fonctionnelle" des interfaces du produit final. Il permet de tester la navigation et les fonctionnalités en intégrant des **éléments d'interactivité** (et non du code réel). Ainsi, il permet de tester le produit pour détecter d'éventuels problèmes d'ergonomie ou d'accessibilité. C'est une étape essentielle avant de passer au développement. Il peut également servir d'outil de présentation et de démarchage dans un cadre commercial.  
 
-40.	Qu’est-ce qu’une grille de mise en page ?  
-En Design d’interface, une **grille de mise en page** agit comme un cadre servant à organiser les éléments d’une page. Les différentes lignes et colonnes créent des repères et permettent de positionner les éléments. Les grilles apportent structure, harmonie, rythme, et contribuent à respecter la hiérarchisation du contenu.
-Dans un processus de maquettage avec Figma, on peut par exemple utiliser l’outil Layout Grid pour faire apparaître des lignes et des colonnes et ainsi faciliter le design.
+---
 
-41.	Qu’est-ce que la notion d’affordance en UX Design ?  
-En UX Design, la notion d’ **affordance** désigne les propriétés ou les caractéristiques d'un élément qui permettent d’indiquer ce qui peut être fait avec celui-ci.
-Les affordances sont des indices qui donnent une idée de la manière dont les utilisateurs peuvent interagir avec.
-Par exemple, la vue d’un bouton rouge indique un danger ou une action indésirable, tandis qu’un bouton vert se veut plus engageant ou digne de confiance.
-Les icônes doivent également respecter cette notion pour mieux guider l’utilisateur.
+### 38. Qu’est-ce que la hiérarchie visuelle en UI Design ?  
+En **UI Design**, la hiérarchie visuelle permet de respecter l'importance du contenu qui doit être mis en avant sur une page. Ce concept permet de faciliter la recherche d'information et l'accès aux fonctionnalités nécessaires à la **qualité de l'expérience utilisateur**.  
+Pour guider l'utilisateur, on peut construire une page selon des schémas visuels comme le **F-Pattern** ou le **Z-Pattern**. Ou au contraire, casser ces schémas selon l'effet voulu.  
+D'autres éléments peuvent intervenir comme la typographie, les espaces blancs, la cohérence des couleurs. La conception mobile requiert une attention particulière car il faut prioriser davantage. À savoir qu'un utilisateur préfère généralement se trouver sur un site qui lui paraît familier, avec une structure reconnaissable.  
 
-42.	Qu’est-ce qu’un « mobile first design » ?  
-Le **Mobile First Design** est une approche qui consiste à concevoir un site en se focalisant d’abord sur sa **version mobile**. Beaucoup de sites sont consultés avec un téléphone mobile, d’où l’importance et son succès auprès des Designers.
+---
+
+### 39. Qu’est-ce que l’accessibilité en UX Design ?  
+En UX Design, l'**accessibilité** est un concept qui consiste en la création de produits numériques qui répondent à des critères d'accessibilité, c'est-à-dire qui peuvent être utilisés par tous les individus quel que soient leur aptitude physique ou mentale, mais aussi leur infrastructure réseau, leur langue ou leur culture.  
+Il s’agit d’une obligation légale en France.  
+
+---
+
+### 40. Qu’est-ce qu’une grille de mise en page ?  
+En Design d’interface, une **grille de mise en page** agit comme un cadre servant à organiser les éléments d’une page. Les différentes lignes et colonnes créent des repères et permettent de positionner les éléments.  
+Les grilles apportent structure, harmonie, rythme, et contribuent à respecter la hiérarchisation du contenu.  
+Dans un processus de maquettage avec Figma, on peut par exemple utiliser l’outil **Layout Grid** pour faire apparaître des lignes et des colonnes et ainsi faciliter le design.  
+
+---
+
+### 41. Qu’est-ce que la notion d’affordance en UX Design ?  
+En UX Design, la notion d’**affordance** désigne les propriétés ou les caractéristiques d'un élément qui permettent d’indiquer ce qui peut être fait avec celui-ci.  
+Les affordances sont des indices qui donnent une idée de la manière dont les utilisateurs peuvent interagir avec.  
+Par exemple, la vue d’un bouton rouge indique un danger ou une action indésirable, tandis qu’un bouton vert se veut plus engageant ou digne de confiance.  
+Les icônes doivent également respecter cette notion pour mieux guider l’utilisateur.  
+
+---
+
+### 42. Qu’est-ce qu’un « mobile first design » ?  
+Le **Mobile First Design** est une approche qui consiste à concevoir un site en se focalisant d’abord sur sa **version mobile**. Beaucoup de sites sont consultés avec un téléphone mobile, d’où l’importance et son succès auprès des Designers.  
 Contrairement au principe de Responsive, cette approche adapte le design pour les écrans larges (tablettes ou ordinateurs) en deuxième intention.
+
 
 
 ## Programmation orientée objet (POO)
