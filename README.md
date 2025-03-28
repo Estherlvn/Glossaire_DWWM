@@ -407,13 +407,82 @@ Contrairement au principe de Responsive, cette approche adapte le design pour le
 59.	Qu’est-ce que la sérialisation en PHP ? 
 
 ## Architecture 
-60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
-61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
-62.	Qu’est-ce que l’architecture MVC ?
-63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
-64.	Quels sont les avantages de l’architecture MVC ?
-65.	Existe-t-il des variantes à l’architecture MVC ?
-66.	Qu’est-ce qu’une API ? Définir l’architecture REST
+### 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+
+L'**architecture client/serveur** est un modèle d'organisation des applications où deux entités principales interagissent : un **client** (qui envoie des requêtes) et un **serveur** (qui traite les requêtes et renvoie des réponses).
+
+Les clients peuvent interroger le serveur via des requêtes de type **HTTP (HyperText Transfer Protocol)**. Lorsqu’on ajoute un **S** (ce qui donne **HTTPS**), cela signifie que les données échangées sont **sécurisées par un chiffrement SSL/TLS**. Cela permet de protéger les informations sensibles pendant leur transmission.
+
+---
+
+### 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+
+Un **design pattern (ou modèle de conception)** est une **solution réutilisable à un problème courant** rencontré lors de la conception logicielle. Les design patterns permettent de **standardiser les bonnes pratiques** de programmation, en facilitant la maintenance, l'évolutivité et la lisibilité du code.
+
+**Exemples de design patterns :**
+- **Singleton :** Garantit qu'une classe n'a qu'une seule instance et fournit un point d'accès global à cette instance.
+- **Factory Method :** Définit une interface pour créer un objet, mais laisse aux sous-classes la décision de la classe à instancier.
+- **Observer :** Permet à un objet de notifier automatiquement des changements d'état à une liste d'observateurs qui sont automatiquement mis à jour.
+
+---
+
+### 62. Qu’est-ce que l’architecture MVC ?
+
+L'**architecture MVC (Model-View-Controller)** est un **design pattern** qui permet de **séparer une application en trois couches distinctes** pour mieux organiser le code et faciliter sa maintenance. Ces trois couches sont : **Modèle (Model)**, **Vue (View)** et **Contrôleur (Controller)**.
+
+---
+
+### 63. Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+
+- **Modèle (Model) :**
+  - Gère la logique métier et les données de l'application.
+  - Interagit avec la base de données.
+  - Ne contient pas de logique d'affichage.
+
+- **Vue (View) :**
+  - Gère l'affichage des données à l'utilisateur.
+  - Ne contient pas de logique métier.
+  - Reçoit les données du contrôleur et les affiche de manière formatée.
+
+- **Contrôleur (Controller) :**
+  - Sert d'intermédiaire entre le Modèle et la Vue.
+  - Reçoit les requêtes de l'utilisateur, interagit avec le modèle, et sélectionne la vue appropriée pour afficher les données.
+
+---
+
+### 64. Quels sont les avantages de l’architecture MVC ?
+
+- **Séparation des responsabilités :** Chaque couche a un rôle bien défini, ce qui facilite la maintenance.
+- **Réutilisabilité du code :** Les composants peuvent être utilisés indépendamment les uns des autres.
+- **Testabilité améliorée :** Le modèle et le contrôleur peuvent être testés séparément.
+- **Modularité :** Permet de faire évoluer chaque partie de l’application sans impacter les autres.
+
+---
+
+### 65. Existe-t-il des variantes à l’architecture MVC ?
+
+Oui, il existe plusieurs variantes de l’architecture MVC, parmi lesquelles :
+- **MVVM (Model-View-ViewModel) :** Souvent utilisé pour les interfaces graphiques en JavaScript ou applications mobiles, introduit une couche `ViewModel` qui gère la logique de présentation.
+- **MVP (Model-View-Presenter) :** Simplifie l’interaction entre la Vue et le Modèle en introduisant un `Presenter` qui gère la logique de présentation.
+- **HMVC (Hierarchical Model-View-Controller) :** Introduit une hiérarchie entre les contrôleurs pour améliorer l’organisation du code.
+
+---
+
+### 66. Qu’est-ce qu’une API ? Définir l’architecture REST
+
+Une **API (Application Programming Interface)** est un **ensemble de règles et d’outils permettant à différentes applications de communiquer entre elles**. Elle définit les méthodes par lesquelles une application peut interagir avec une autre.
+
+L’**architecture REST (Representational State Transfer)** est un style d’architecture permettant de concevoir des **API web** qui utilisent **les requêtes HTTP standard (GET, POST, PUT, DELETE, etc.)** pour manipuler des ressources identifiées par des URLs.
+
+**Principes de REST :**
+- **Stateless (sans état) :** Chaque requête est indépendante des précédentes.
+- **Uniformité de l’interface :** Les interactions sont standardisées par des méthodes HTTP bien définies.
+- **Cachabilité :** Les réponses peuvent être mises en cache pour améliorer les performances.
+- **Architecture client-serveur :** Séparation claire entre le client (interface utilisateur) et le serveur (stockage et traitement des données).
+
+Les **APIs RESTful** sont largement utilisées car elles sont simples à implémenter, évolutives, et compatibles avec de nombreux clients.
+
+
 
 ## Modélisation - Base de données
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
