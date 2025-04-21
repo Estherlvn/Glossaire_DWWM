@@ -198,13 +198,11 @@ Ils permettent notamment de :
   - Simplification des modèles de données complexes.  
   - Fichiers de configuration et stockage de données.  
   
-### 22. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+#### 22. Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 
 Il est possible d'interpréter du JavaScript côté serveur comme s'il était un langage backend classique (comme PHP ou Python). On peut notamment utiliser **Node.js**, dont l'environnement permet d'exécuter du JavaScript en dehors du navigateur, directement sur un serveur.
 
----
-
-### 23. Qu’est-ce qu’un sélecteur CSS ?
+#### 23. Qu’est-ce qu’un sélecteur CSS ?
 
 Les sélecteurs CSS sont des expressions qui permettent de cibler des éléments HTML présents sur une page web pour leur appliquer une règle CSS.
 
@@ -225,8 +223,7 @@ Les sélecteurs CSS sont des expressions qui permettent de cibler des éléments
 
 ---
 
-### 24. Quelle balise HTML permet de créer un lien hypertexte ?
-
+#### 24. Quelle balise HTML permet de créer un lien hypertexte ?
 La balise HTML qui permet de créer un lien hypertexte est la balise `<a>`.  
 La balise `<a>` seule ne suffit pas. Pour qu'elle fonctionne comme un lien hypertexte, il faut obligatoirement lui ajouter l'attribut `href` qui indique la destination du lien.
 
@@ -234,8 +231,7 @@ La balise `<a>` seule ne suffit pas. Pour qu'elle fonctionne comme un lien hyper
 
 ---
 
-### 25. Qu’est-ce qu’une requête AJAX ?
-
+#### 25. Qu’est-ce qu’une requête AJAX ?
 Une requête **AJAX (Asynchronous JavaScript and XML)** est une technique qui permet de faire des requêtes HTTP (GET, POST, etc.) vers un serveur, de manière asynchrone, sans recharger la page web entière.  
 Cela rend les applications web plus interactives et rapides.
 
@@ -245,40 +241,39 @@ Cela rend les applications web plus interactives et rapides.
 
 ---
 
-### 26. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
-
+#### 26. Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 - Pour sélectionner tous les éléments d’une classe spécifique, on utilise le **sélecteur de classe** qui commence par un point (`.`) suivi du nom de la classe.
 - Pour un identifiant spécifique, on utilise le **sélecteur d’identifiant** qui commence par un dièse (`#`) suivi du nom de l'identifiant.
 
 ---
 
-### 27. Définir le responsive design
+#### 27. Définir le responsive design
 
 Le **responsive design** désigne une manière de concevoir des sites web (préalablement conçus pour un format desktop) qui deviennent parfaitement adaptés à tous les types et toutes les tailles d'écrans. Cela consiste à rendre un site web accessible et adaptable à tous les appareils (tablettes, smartphones, etc.) de façon automatique grâce à différentes techniques de développement (CSS, media queries, etc.).
 
 ---
 
-### 28. Qu’est-ce que le templating ?
+#### 28. Qu’est-ce que le templating ?
 
 Le **templating** permet de créer des pages dynamiques en remplaçant des variables dans un modèle HTML par des données réelles. C'est très pratique pour générer des interfaces personnalisées en fonction d'un utilisateur ou d’un contenu.  
 Cette création de “modèles” permet un processus de création d'un format ou d'une mise en page réutilisable pour présenter des données.
 
 ---
 
-### 29. Qu’est-ce qu’une fonction anonyme en Javascript ?
+#### 29. Qu’est-ce qu’une fonction anonyme en Javascript ?
 
 Les **fonctions anonymes** sont des fonctions qui ne possèdent pas de nom. Elles sont souvent utilisées lorsqu’on n’a pas besoin de réutiliser une fonction ailleurs dans le script. Généralement, on utilise les fonctions anonymes lorsqu'elles sont appelées qu’à un seul endroit dans le code.
 
 ---
 
-### 30. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+#### 30. Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
 Pour ajouter une valeur à un tableau, on utilise la méthode **`push()`**. Cette méthode retourne la longueur du tableau une fois les nouvelles valeurs ajoutées.  
 La méthode `push()` peut prendre plusieurs valeurs comme arguments et accepte autant de valeurs qu’on le souhaite.
 
 ---
 
-### 31. Qu’est-ce qu’un « media query » ?
+#### 31. Qu’est-ce qu’un « media query » ?
 
 Les **media queries** permettent de définir des règles CSS spécifiques qui s’appliquent uniquement lorsque certaines conditions sont remplies, telles que :
 - La largeur de l'écran (responsive),
@@ -297,7 +292,7 @@ Elles sont définies à l’intérieur d’une règle `@media` dans une feuille 
 
 ---
 
-### 32. Qu’est-ce qu’un pseudo élément en CSS ?
+#### 32. Qu’est-ce qu’un pseudo élément en CSS ?
 
 Les **pseudo-éléments CSS** permettent de cibler une partie spécifique d’un élément HTML pour lui appliquer des styles.  
 Il existe 4 pseudo-éléments recommandés par le W3C :
@@ -310,14 +305,14 @@ Il existe 4 pseudo-éléments recommandés par le W3C :
 
 ---
 
-### 33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalents
+#### 33. Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalents
 
 **Bootstrap** est un framework CSS (frontend) composé d'un ensemble de fichiers CSS et JavaScript qui contiennent des règles prédéfinies pour créer des composants (boutons, formulaires, navigation, etc.).  
 Les meilleures alternatives à Bootstrap sont **Tailwind CSS** (qui permet de construire des interfaces sur mesure directement dans le HTML) et **UIKit**.
 
 ---
 
-### 34. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+#### 34. Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
 Les deux méthodes qui peuvent être associées à un formulaire HTML sont : **GET** et **POST**.
 
@@ -328,7 +323,7 @@ Les deux méthodes qui peuvent être associées à un formulaire HTML sont : **G
 
 
 ## UX UI
-### 35. Quelle est la différence entre UX Design et UI Design ?  
+#### 35. Quelle est la différence entre UX Design et UI Design ?  
 Acronymes pour User Experience et User Interface.  
 
 L'**UX Designer** travaille sur l'optimisation et l'amélioration de l'expérience utilisateur.  
@@ -342,39 +337,39 @@ Il est également responsable de l'image que renvoie le site d'une entreprise, p
 
 ---
 
-### 36. Qu’est-ce qu’un wireframe ?  
+#### 36. Qu’est-ce qu’un wireframe ?  
 Parmi les étapes de **conception et de maquettage**, on peut considérer que le wireframe est la première représentation visuelle de l'interface utilisateur d'un site web ou d'une application logicielle. Elle peut être précédée par un **Zoning**, une étape de schématisation pour dégrossir l'apparence d'une future page.  
 Le **Wireframe** permet de définir l'emplacement et l'organisation des éléments et des formes nécessaires au fonctionnement du site (ou projet). Il permet de représenter l’architecture du site et la façon dont les différentes pages et éléments sont liés entre eux. On ne se concentre pas sur l'aspect du rendu visuel. Le graphisme interviendra plus tard, lors de la phase **Maquette**.  
 Les wireframes facilitent le travail d'échange et de réflexion avec le client (ou ses collègues) car ils sont facilement modulables et modifiables.  
 
 ---
 
-### 37. Qu’est-ce qu’un prototype ?  
+#### 37. Qu’est-ce qu’un prototype ?  
 Un **Prototype** est une représentation dite "fonctionnelle" des interfaces du produit final. Il permet de tester la navigation et les fonctionnalités en intégrant des **éléments d'interactivité** (et non du code réel). Ainsi, il permet de tester le produit pour détecter d'éventuels problèmes d'ergonomie ou d'accessibilité. C'est une étape essentielle avant de passer au développement. Il peut également servir d'outil de présentation et de démarchage dans un cadre commercial.  
 
 ---
 
-### 38. Qu’est-ce que la hiérarchie visuelle en UI Design ?  
+#### 38. Qu’est-ce que la hiérarchie visuelle en UI Design ?  
 En **UI Design**, la hiérarchie visuelle permet de respecter l'importance du contenu qui doit être mis en avant sur une page. Ce concept permet de faciliter la recherche d'information et l'accès aux fonctionnalités nécessaires à la **qualité de l'expérience utilisateur**.  
 Pour guider l'utilisateur, on peut construire une page selon des schémas visuels comme le **F-Pattern** ou le **Z-Pattern**. Ou au contraire, casser ces schémas selon l'effet voulu.  
 D'autres éléments peuvent intervenir comme la typographie, les espaces blancs, la cohérence des couleurs. La conception mobile requiert une attention particulière car il faut prioriser davantage. À savoir qu'un utilisateur préfère généralement se trouver sur un site qui lui paraît familier, avec une structure reconnaissable.  
 
 ---
 
-### 39. Qu’est-ce que l’accessibilité en UX Design ?  
+#### 39. Qu’est-ce que l’accessibilité en UX Design ?  
 En UX Design, l'**accessibilité** est un concept qui consiste en la création de produits numériques qui répondent à des critères d'accessibilité, c'est-à-dire qui peuvent être utilisés par tous les individus quel que soient leur aptitude physique ou mentale, mais aussi leur infrastructure réseau, leur langue ou leur culture.  
 Il s’agit d’une obligation légale en France.  
 
 ---
 
-### 40. Qu’est-ce qu’une grille de mise en page ?  
+#### 40. Qu’est-ce qu’une grille de mise en page ?  
 En Design d’interface, une **grille de mise en page** agit comme un cadre servant à organiser les éléments d’une page. Les différentes lignes et colonnes créent des repères et permettent de positionner les éléments.  
 Les grilles apportent structure, harmonie, rythme, et contribuent à respecter la hiérarchisation du contenu.  
 Dans un processus de maquettage avec Figma, on peut par exemple utiliser l’outil **Layout Grid** pour faire apparaître des lignes et des colonnes et ainsi faciliter le design.  
 
 ---
 
-### 41. Qu’est-ce que la notion d’affordance en UX Design ?  
+#### 41. Qu’est-ce que la notion d’affordance en UX Design ?  
 En UX Design, la notion d’**affordance** désigne les propriétés ou les caractéristiques d'un élément qui permettent d’indiquer ce qui peut être fait avec celui-ci.  
 Les affordances sont des indices qui donnent une idée de la manière dont les utilisateurs peuvent interagir avec.  
 Par exemple, la vue d’un bouton rouge indique un danger ou une action indésirable, tandis qu’un bouton vert se veut plus engageant ou digne de confiance.  
@@ -382,7 +377,7 @@ Les icônes doivent également respecter cette notion pour mieux guider l’util
 
 ---
 
-### 42. Qu’est-ce qu’un « mobile first design » ?  
+#### 42. Qu’est-ce qu’un « mobile first design » ?  
 Le **Mobile First Design** est une approche qui consiste à concevoir un site en se focalisant d’abord sur sa **version mobile**. Beaucoup de sites sont consultés avec un téléphone mobile, d’où l’importance et son succès auprès des Designers.  
 Contrairement au principe de Responsive, cette approche adapte le design pour les écrans larges (tablettes ou ordinateurs) en deuxième intention.
 
@@ -390,12 +385,12 @@ Contrairement au principe de Responsive, cette approche adapte le design pour le
 
 ## Programmation orientée objet (POO)
 
-### 43. Donner une définition de la programmation orientée objet
+#### 43. Donner une définition de la programmation orientée objet
 La programmation orientée objet (POO) est un paradigme de programmation structurant le code autour de **classes** et **d’objets**, représentant des entités du monde réel. Elle permet de regrouper des données (attributs) et des comportements (méthodes) dans un même bloc logique. Elle favorise la **réutilisabilité**, la **modularité**, la **testabilité** et la **maintenabilité** du code.
 
 ---
 
-### 44. Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
+#### 44. Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
 Une **classe** est un modèle (ou un plan) permettant de créer des objets. Elle définit un ensemble d’attributs (propriétés) et de comportements (méthodes) communs à toutes ses instances.
 
 #### Exemple en PHP :
@@ -410,7 +405,7 @@ class Voiture {
 
 ---
 
-### 45. Qu’est-ce qu’un objet ?
+#### 45. Qu’est-ce qu’un objet ?
 
 Un **objet** est une instance d’une classe, c’est-à-dire une représentation concrète de la classe avec ses propres valeurs pour chaque attribut.
 
@@ -421,7 +416,7 @@ $maVoiture->marque = "Peugeot";
 
 ---
 
-### 46. Définir la notion de propriété / attribut / méthode
+#### 46. Définir la notion de propriété / attribut / méthode
 
 - **Propriété (ou attribut)** : une variable appartenant à une classe et décrivant une caractéristique de l’objet.
 - **Méthode** : une fonction définie dans une classe et décrivant un comportement de l’objet.
@@ -437,7 +432,7 @@ class Exemple {
 
 ---
 
-### 47. Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
+#### 47. Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
 La **visibilité** détermine les endroits depuis lesquels une propriété ou méthode peut être utilisée dans le code.
 
 - `public` : accessible depuis n’importe où (extérieur, classe, héritiers)
@@ -446,7 +441,7 @@ La **visibilité** détermine les endroits depuis lesquels une propriété ou m�
 
 ---
 
-### 48. Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
+#### 48. Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
 La méthode spéciale `__construct()` est appelée automatiquement lors de l’instanciation d’un objet. Elle sert à **initialiser** les propriétés de l’objet.
 
 ```php
@@ -460,12 +455,12 @@ class Utilisateur {
 
 ---
 
-### 49. Qu’est-ce que l’encapsulation ?
+#### 49. Qu’est-ce que l’encapsulation ?
 L’**encapsulation** est un principe qui consiste à protéger les données d’un objet en limitant leur accès direct. Cela passe par l’utilisation de propriétés privées et de méthodes publiques (`getters` et `setters`) pour contrôler leur lecture ou modification.
 
 ---
 
-### 50. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
+#### 50. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
 Étendre une classe signifie créer une **classe fille** qui hérite des attributs et méthodes d’une **classe parent**.
 
 Concept clé : **héritage**
@@ -486,7 +481,7 @@ class Chien extends Animal {
 
 ---
 
-### 51. Définir l’opérateur de résolution de portée
+#### 51. Définir l’opérateur de résolution de portée
 L’opérateur `::` permet d’accéder à des éléments **statiques**, des **constantes de classe**, ou à une méthode de la classe parente (`parent::`).
 
 ```php
@@ -496,7 +491,7 @@ parent::maMethode();
 
 ---
 
-### 52. Définir une méthode / propriété statique
+#### 52. Définir une méthode / propriété statique
 Une propriété ou méthode **statique** est liée à la **classe** elle-même et non à ses instances. Elle est accessible sans créer d’objet.
 
 ```php
@@ -512,7 +507,7 @@ Outils::aide();
 
 ---
 
-### 53. Définir le polymorphisme en POO
+#### 53. Définir le polymorphisme en POO
 Le **polymorphisme** permet à différentes classes de répondre à un même message (appel de méthode) de manière différente. Il repose sur la **surcharge** ou la **redéfinition** de méthodes héritées.
 
 ```php
@@ -531,7 +526,7 @@ class Chat extends Animal {
 
 ---
 
-### 54. Définir une méthode / classe abstraite ?
+#### 54. Définir une méthode / classe abstraite ?
 - Une **classe abstraite** sert de base pour d'autres classes. Elle ne peut pas être instanciée.
 - Une **méthode abstraite** est une méthode sans corps, que les classes dérivées doivent implémenter.
 
@@ -549,7 +544,7 @@ class Cercle extends Forme {
 
 ---
 
-### 55. Définir le chaînage de méthodes
+#### 55. Définir le chaînage de méthodes
 Le chaînage de méthodes consiste à retourner l’objet courant (`$this`) dans chaque méthode pour pouvoir appeler plusieurs méthodes à la suite.
 
 ```php
@@ -570,7 +565,7 @@ $obj->a()->b();
 
 ---
 
-### 56. Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques » ?
+#### 56. Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques » ?
 La méthode `__toString()` est appelée automatiquement lorsqu’un objet est utilisé comme une chaîne de caractères (ex : `echo $objet`).
 
 ```php
@@ -587,7 +582,7 @@ Autres méthodes magiques en PHP :
 
 ---
 
-### 57. Qu’est-ce qu’un « autoload » ?
+#### 57. Qu’est-ce qu’un « autoload » ?
 L’**autoload** permet de charger automatiquement les fichiers de classe lorsqu’on instancie un objet, évitant ainsi les `require` manuels.
 
 #### Exemple simple avec `spl_autoload_register()` :
@@ -601,7 +596,7 @@ Avec Composer, l’autoload est géré via `autoload` dans le `composer.json`.
 
 ---
 
-### 58. Comment appelle-t-on en français les « getters » et les « setters » ?
+#### 58. Comment appelle-t-on en français les « getters » et les « setters » ?
 - **Getter** : accesseur → permet de lire la valeur d’un attribut privé
 - **Setter** : mutateur → permet de modifier la valeur d’un attribut privé
 
@@ -617,7 +612,7 @@ public function setNom($nom) {
 
 ---
 
-### 59. Qu’est-ce que la sérialisation en PHP ?
+#### 59. Qu’est-ce que la sérialisation en PHP ?
 La **sérialisation** est le processus de conversion d’un objet en une chaîne de caractères pour le stocker ou le transmettre. La **désérialisation** est l’opération inverse.
 
 #### Exemple :
@@ -631,14 +626,14 @@ Utilisations : stockage en session, persistance temporaire, cache, etc.
 
 
 ## Architecture 
-### 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+#### 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 L'**architecture client/serveur** est un modèle d'organisation des applications où deux entités principales interagissent : un **client** (qui envoie des requêtes) et un **serveur** (qui traite les requêtes et renvoie des réponses).
 
 Les clients peuvent interroger le serveur via des requêtes de type **HTTP (HyperText Transfer Protocol)**. Lorsqu’on ajoute un **S** (ce qui donne **HTTPS**), cela signifie que les données échangées sont **sécurisées par un chiffrement SSL/TLS**. Cela permet de protéger les informations sensibles pendant leur transmission.
 
 ---
 
-### 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+#### 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
 Un **design pattern (ou modèle de conception)** est une **solution réutilisable à un problème courant** rencontré lors de la conception logicielle. Les design patterns permettent de **standardiser les bonnes pratiques** de programmation, en facilitant la maintenance, l'évolutivité et la lisibilité du code.
 
 **Exemples de design patterns :**
@@ -648,13 +643,13 @@ Un **design pattern (ou modèle de conception)** est une **solution réutilisabl
 
 ---
 
-### 62. Qu’est-ce que l’architecture MVC ?
+#### 62. Qu’est-ce que l’architecture MVC ?
 
 L'**architecture MVC (Model-View-Controller)** est un **design pattern** qui permet de **séparer une application en trois couches distinctes** pour mieux organiser le code et faciliter sa maintenance. Ces trois couches sont : **Modèle (Model)**, **Vue (View)** et **Contrôleur (Controller)**.
 
 ---
 
-### 63. Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+#### 63. Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
 
 - **Modèle (Model) :**
   - Gère la logique métier et les données de l'application.
@@ -672,7 +667,7 @@ L'**architecture MVC (Model-View-Controller)** est un **design pattern** qui per
 
 ---
 
-### 64. Quels sont les avantages de l’architecture MVC ?
+#### 64. Quels sont les avantages de l’architecture MVC ?
 
 - **Séparation des responsabilités :** Chaque couche a un rôle bien défini, ce qui facilite la maintenance.
 - **Réutilisabilité du code :** Les composants peuvent être utilisés indépendamment les uns des autres.
@@ -681,7 +676,7 @@ L'**architecture MVC (Model-View-Controller)** est un **design pattern** qui per
 
 ---
 
-### 65. Existe-t-il des variantes à l’architecture MVC ?
+#### 65. Existe-t-il des variantes à l’architecture MVC ?
 
 Oui, il existe plusieurs variantes de l’architecture MVC, parmi lesquelles :
 - **MVVM (Model-View-ViewModel) :** Souvent utilisé pour les interfaces graphiques en JavaScript ou applications mobiles, introduit une couche `ViewModel` qui gère la logique de présentation.
@@ -690,7 +685,7 @@ Oui, il existe plusieurs variantes de l’architecture MVC, parmi lesquelles :
 
 ---
 
-### 66. Qu’est-ce qu’une API ? Définir l’architecture REST
+#### 66. Qu’est-ce qu’une API ? Définir l’architecture REST
 
 Une **API (Application Programming Interface)** est un **ensemble de règles et d’outils permettant à différentes applications de communiquer entre elles**. Elle définit les méthodes par lesquelles une application peut interagir avec une autre.
 
@@ -756,7 +751,7 @@ h.	Concaténer 2 chaînes de caractères
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
 
 ## Sécurité
-### 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+#### 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
 L’injection SQL est une attaque qui consiste à insérer du code SQL malveillant dans des champs de formulaire ou paramètres d'URL, dans le but de manipuler la base de données (extraction, suppression ou modification de données).
 ####  Bonnes pratiques pour s’en prémunir :
 - Ne jamais insérer directement les données utilisateur dans une requête SQL.
@@ -780,9 +775,8 @@ $user = User::where('email', $email)->first();
 
 > Ces méthodes permettent de sécuriser les interactions avec la base de données en liant les paramètres et en empêchant toute exécution de code malveillant.
 
----
-
-### 95. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+--
+#### 95. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
 La faille XSS (Cross-Site Scripting) permet à un attaquant d’injecter du code JavaScript malveillant dans une page web, pouvant compromettre la sécurité des utilisateurs.
 #### Bonnes pratiques :
 -  Échapper toutes les données affichées dans les vues.
@@ -798,9 +792,8 @@ La faille XSS (Cross-Site Scripting) permet à un attaquant d’injecter du code
 {{ $user->name }} {# échappement automatique avec Blade #}
 ```
 
----
-
-### 96. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+--
+#### 96. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
 
 Le CSRF (Cross-Site Request Forgery) est une attaque qui pousse un utilisateur authentifié à exécuter une action non désirée sur une application dans laquelle il est connecté.
 #### Bonnes pratiques :
@@ -819,9 +812,8 @@ Le CSRF (Cross-Site Request Forgery) est une attaque qui pousse un utilisateur a
 </form>
 ```
 
----
-
-### 97. Définir l’attaque par force brute et l’attaque par dictionnaire
+--
+#### 97. Définir l’attaque par force brute et l’attaque par dictionnaire
 - **Force brute** : consiste à tester toutes les combinaisons possibles de mots de passe.
 - **Attaque par dictionnaire** : consiste à tester une liste de mots de passe courants ou probables.
 #### Bonnes pratiques :
@@ -837,8 +829,8 @@ Route::post('/login', [LoginController::class, 'login'])->middleware('throttle:5
 #### Exemple Symfony :
 Configurer le RateLimiter dans `security.yaml` pour restreindre les tentatives de connexion.
 
----
-### 98. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+--
+#### 98. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
 Oui, voici quelques failles courantes et leur fonctionnement :
 
 #### Clickjacking
@@ -865,8 +857,9 @@ X-Frame-Options: DENY
 **Prévention** :
 - Désactiver l'affichage des erreurs en production (`APP_DEBUG=false`).
 - Utiliser des messages d'erreur génériques pour les utilisateurs finaux.
-
-### 99. À quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+  
+--
+#### 99. À quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
 - **Authentification** : permet de vérifier l’identité de l’utilisateur (ex : login/mot de passe).
 - **Autorisation** : permet de vérifier ce que l’utilisateur a le droit de faire (ex : accès admin).
 
@@ -880,8 +873,8 @@ $this->denyAccessUnlessGranted('ROLE_ADMIN');
 $this->authorize('update', $post);
 ```
 
----
-### 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+--
+#### 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 Le **hachage** transforme un mot de passe en une chaîne illisible, non réversible. Cela empêche de stocker des mots de passe en clair dans la base de données.
 
 #### Algorithmes recommandés :
@@ -903,8 +896,8 @@ use Illuminate\Support\Facades\Hash;
 $user->password = Hash::make($request->password);
 ```
 
----
-### 101. Qu’est-ce qu’une politique de mots de passe forts ?
+--
+#### 101. Qu’est-ce qu’une politique de mots de passe forts ?
 
 Une politique de mots de passe forts impose des règles pour rendre les mots de passe difficiles à deviner ou à casser.
 
@@ -913,9 +906,8 @@ Une politique de mots de passe forts impose des règles pour rendre les mots de 
 - Mélanger majuscules, minuscules, chiffres et caractères spéciaux
 - Interdire les mots trop simples ou évidents ("123456", "password")
 
----
-
-### 102. Qu’est-ce que l’hameçonnage ?
+--
+#### 102. Qu’est-ce que l’hameçonnage ?
 
 L’**hameçonnage** (ou phishing) est une attaque visant à obtenir des informations sensibles (mots de passe, données bancaires, etc.) en se faisant passer pour un tiers de confiance (banque, service client, etc.).
 
@@ -927,7 +919,7 @@ L’**hameçonnage** (ou phishing) est une attaque visant à obtenir des informa
 
 ---
 
-### 103. Définir la validation des entrées
+#### 103. Définir la validation des entrées
 
 La **validation des entrées** consiste à vérifier que les données envoyées par l’utilisateur sont correctes, sécurisées et attendues (type, format, taille, etc.).
 
@@ -952,22 +944,22 @@ public function rules()
 ---
 
 ## RGPD
-### 104. Qu’est-ce que le RGPD ?
+#### 104. Qu’est-ce que le RGPD ?
 Le **RGPD** (Règlement Général sur la Protection des Données) est un **texte de droit européen** à **force obligatoire**, entré en vigueur le **25 mai 2018**, visant à encadrer le traitement et la circulation des données à caractère personnel dans l’Union européenne. Il remplace une directive de 1995.
 
 
-### 105. Quel est son objectif principal ?
+#### 105. Quel est son objectif principal ?
 L'objectif principal du RGPD est :
 - **d'harmoniser** la législation entre les pays de l’UE,
 - **de responsabiliser** les acteurs (entreprises, États, agences, ONG...),
 - et **de renforcer la confiance des citoyens** dans la manière dont leurs données personnelles sont collectées, stockées et utilisées.
 
 
-### 106. Quelle est la date d’entrée en vigueur du RGPD ?
+#### 106. Quelle est la date d’entrée en vigueur du RGPD ?
 Le RGPD est **obligatoire dans toute l’Union européenne depuis le 25 mai 2018**.
 
 
-### 107. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+#### 107. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
 Le non-respect du RGPD peut entraîner :
 - **des mises en demeure**,
 - **des amendes administratives** (jusqu'à **20 millions d’euros** ou **4% du chiffre d'affaires mondial annuel**),
@@ -976,11 +968,11 @@ Le non-respect du RGPD peut entraîner :
 - et même **la fermeture d’une entreprise**.
 
 
-### 108. En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+#### 108. En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
 Il s’agit de la **CNIL** (Commission Nationale de l’Informatique et des Libertés), première autorité administrative indépendante créée en 1978. Elle contrôle, informe, accompagne, et peut sanctionner les entités qui ne respectent pas la législation sur les données personnelles.
 
 
-### 109. Quel est le consentement valide selon le RGPD ?
+#### 109. Quel est le consentement valide selon le RGPD ?
 Un consentement est valide s’il est :
 - **libre**,
 - **éclairé**, 
@@ -989,11 +981,11 @@ Un consentement est valide s’il est :
 Il doit être exprimé clairement (ex : case à cocher non pré-cochée) et peut être retiré à tout moment.
 
 
-### 110. Qu’est-ce qu’une politique de confidentialité ?
+#### 110. Qu’est-ce qu’une politique de confidentialité ?
 Une **politique de confidentialité** est un document qui **informe les utilisateurs** de la manière dont leurs données personnelles sont collectées, utilisées, conservées, partagées, ainsi que de leurs **droits** (accès, rectification, effacement, etc.). Elle est **obligatoire** pour tout site ou service collectant des données.
 
 
-### 111. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+#### 111. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
 Le RGPD ne fixe pas une durée unique, mais impose que les données soient :
 - **conservées uniquement pendant une durée justifiée** par la finalité du traitement,
 - **supprimées ou anonymisées** une fois cette durée dépassée.
@@ -1001,7 +993,7 @@ Le RGPD ne fixe pas une durée unique, mais impose que les données soient :
 **Exemple :** un CV ne peut être conservé que **2 ans** par un employeur sans nouvelle interaction avec le candidat.
 
 
-### 112. Quels sont les droits des utilisateurs selon le RGPD ?
+#### 112. Quels sont les droits des utilisateurs selon le RGPD ?
 Les utilisateurs disposent de plusieurs droits :
 - **Droit d’information**
 - **Droit d’accès**
@@ -1012,7 +1004,7 @@ Les utilisateurs disposent de plusieurs droits :
 - **Droit à la limitation du traitement**
 - **Droit à la prise de décision automatisée** (ex : s’opposer à une décision prise uniquement par un algorithme)
 
-### 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+#### 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
 Le principe de **minimisation** impose que :
 - Seules les **données strictement nécessaires** à la finalité du traitement soient collectées.
 - Aucune donnée ne doit être collectée "au cas où".
@@ -1022,37 +1014,37 @@ Le principe de **minimisation** impose que :
 ---
 
 ## SEO
-### 114. Qu’est-ce que le SEO ?
+#### 114. Qu’est-ce que le SEO ?
 Le SEO (Search Engine Optimization), ou référencement naturel, est un ensemble de techniques visant à améliorer la visibilité d’un site web dans les résultats des moteurs de recherche, comme Google, sans avoir à payer pour des publicités.
 
-### 115. Quel est l’objectif principal du SEO ?
+#### 115. Quel est l’objectif principal du SEO ?
 L’objectif principal est d’augmenter le trafic organique vers un site web, en le positionnant le plus haut possible dans les résultats de recherche sur des mots-clés pertinents.
 
-### 116. Existe-t-il plusieurs types de référencement ? Lesquels ?
+#### 116. Existe-t-il plusieurs types de référencement ? Lesquels ?
 Oui, il existe trois principaux types de référencement :
 - **SEO (référencement naturel)** : amélioration de la visibilité organique.
 - **SEA (Search Engine Advertising)** : référencement payant via des annonces (ex. Google Ads).
 - **SMO (Social Media Optimization)** : optimisation via les réseaux sociaux.
 
-### 117. Qu’est-ce que la densité de mots-clés en SEO ?
+#### 117. Qu’est-ce que la densité de mots-clés en SEO ?
 C’est le pourcentage d’occurrences d’un mot-clé par rapport au nombre total de mots sur une page. Une bonne densité permet d’indiquer aux moteurs de recherche la thématique de la page sans tomber dans la sur-optimisation.
 
-### 118. Qu’est-ce qu’une balise « alt » ?
+#### 118. Qu’est-ce qu’une balise « alt » ?
 La balise `alt` est une alternative textuelle pour les images. Elle décrit le contenu d’une image et est utile à la fois pour l’accessibilité (lecteurs d’écran) et pour le SEO (Google ne "voit" pas les images mais lit leur description).
 
-### 119. Qu’est-ce que la balise « meta description » ?
+#### 119. Qu’est-ce que la balise « meta description » ?
 C’est une balise HTML qui fournit un résumé du contenu d’une page. Elle s’affiche souvent sous le titre de la page dans les résultats de recherche. Elle n’influence pas directement le positionnement, mais peut améliorer le taux de clic.
 
-### 120. Qu’est-ce que le « nofollow » en SEO ?
+#### 120. Qu’est-ce que le « nofollow » en SEO ?
 C’est un attribut HTML ajouté à un lien (`rel="nofollow"`) qui indique aux moteurs de recherche de ne pas transférer de "jus de lien" (link juice) et de ne pas suivre ce lien. Cela peut être utile pour éviter de référencer certains liens.
 
-### 121. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+#### 121. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
 Un contenu de qualité est essentiel : il attire les utilisateurs, répond à leurs intentions de recherche, réduit le taux de rebond et améliore le temps passé sur le site. Google favorise les contenus pertinents, bien structurés, et régulièrement mis à jour.
 
-### 122. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+#### 122. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
 Les balises de titre structurent le contenu pour les moteurs de recherche et les utilisateurs. Elles hiérarchisent l'information, facilitent la lecture, et aident à comprendre les sujets abordés sur la page. Cela améliore l’indexation et le SEO.
 
-### 123. Quelle est la recommandation pour les URL d'un site web bien référencé ?
+#### 123. Quelle est la recommandation pour les URL d'un site web bien référencé ?
 Une bonne URL SEO est :
 - Courte et descriptive
 - Lisible (sans caractères spéciaux ou chiffres inutiles)
@@ -1061,32 +1053,32 @@ Une bonne URL SEO est :
 
 Exemple : `www.monsite.com/seo-bonnes-pratiques`
 
-### 124. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+#### 124. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
 Le maillage interne consiste à lier les pages d’un même site entre elles. Cela permet :
 - De mieux structurer le site
 - De répartir le jus de lien
 - De faciliter la navigation pour l’utilisateur et les robots de Google
 
-### 125. Qu'est-ce que l'optimisation des images pour le référencement ?
+#### 125. Qu'est-ce que l'optimisation des images pour le référencement ?
 C’est un ensemble de pratiques pour que les images n’impactent pas négativement les performances du site :
 - Utiliser des fichiers légers (compressés)
 - Ajouter des balises `alt` descriptives
 - Nommer les fichiers avec des mots-clés pertinents
 - Utiliser des formats modernes (WebP)
 
-### 126. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+#### 126. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
 Un **sitemap** est un fichier XML qui liste toutes les pages importantes d’un site. Il aide les moteurs de recherche à explorer et indexer plus efficacement les pages du site, en particulier celles moins accessibles via la navigation classique.
 
 
 ## Gestion de projets - DevOps
 
-### 127. Qu’est-ce que la gestion de projet ?
+#### 127. Qu’est-ce que la gestion de projet ?
 La gestion de projet est l'ensemble des activités visant à organiser, planifier et contrôler le bon déroulement d’un projet afin d’atteindre des objectifs précis dans les délais, le budget et les ressources impartis.
 
-### 128. Qu’est-ce qu’une méthode Agile de gestion de projet ?
+#### 128. Qu’est-ce qu’une méthode Agile de gestion de projet ?
 Une méthode Agile est une approche de gestion de projet itérative et incrémentale qui favorise l’adaptabilité, la collaboration, la livraison rapide et continue de fonctionnalités utiles au client.
 
-### 129. Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
+#### 129. Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
 La méthode MoSCoW est une technique de hiérarchisation des exigences :  
 - **Must have** (indispensable)  
 - **Should have** (important)  
@@ -1095,54 +1087,54 @@ La méthode MoSCoW est une technique de hiérarchisation des exigences :
 
 **Avantages** : meilleure gestion des attentes, clarté des priorités, et optimisation des ressources.
 
-### 130. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
+#### 130. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
 La méthodologie MVP (Minimum Viable Product) sert à développer une version minimale mais fonctionnelle d’un produit pour tester rapidement son potentiel auprès des utilisateurs.  
 **Caractéristiques clés** : développement rapide, retour utilisateur précoce, réduction des risques.
 
-### 131. Qu’est-ce que la planification itérative ?
+#### 131. Qu’est-ce que la planification itérative ?
 La planification itérative consiste à découper un projet en cycles courts (itérations), permettant une planification évolutive à chaque fin de cycle selon les retours et les changements constatés.
 
-### 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
+#### 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
 - **Scrum**  
 - **Kanban**  
 - **Extreme Programming (XP)**
 
-### 133. Qu’est-ce qu’une réunion de revue de projet ?
+#### 133. Qu’est-ce qu’une réunion de revue de projet ?
 C’est une réunion planifiée où l’équipe projet présente l’avancement, les livrables réalisés, les blocages et les prochaines étapes aux parties prenantes. Elle permet d’ajuster les objectifs si nécessaire.
 
-### 134. Qu’est-ce qu’un livrable dans un projet ?
+#### 134. Qu’est-ce qu’un livrable dans un projet ?
 Un livrable est un résultat concret attendu à la fin d'une phase du projet, pouvant être un document, une fonctionnalité, une application, etc. Il est validé et remis au client ou au commanditaire.
 
-### 135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+#### 135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
 - **Transparence** : les informations importantes doivent être visibles et comprises par tous.  
 - **Inspection** : les artefacts Scrum et les progrès doivent être régulièrement vérifiés.  
 - **Adaptation** : les processus doivent être ajustés en fonction des inspections pour améliorer la performance.
 
-### 136. Qu’est-ce que le DevOps et quel est son objectif principal ?
+#### 136. Qu’est-ce que le DevOps et quel est son objectif principal ?
 Le DevOps est une approche qui vise à rapprocher les équipes de développement (Dev) et d’exploitation (Ops) afin de livrer plus rapidement, plus fréquemment et de manière plus fiable des applications.  
 **Objectif principal** : automatiser et optimiser le cycle de vie du logiciel.
 
-### 137. Qu’est-ce que l’intégration continue ?
+#### 137. Qu’est-ce que l’intégration continue ?
 L’intégration continue est une pratique consistant à intégrer fréquemment (plusieurs fois par jour) le code développé dans un référentiel central et à tester automatiquement cette intégration pour détecter les erreurs le plus tôt possible.
 
-### 138. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+#### 138. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
 Docker est un outil de virtualisation légère basé sur des conteneurs. Il permet d’emballer une application avec ses dépendances dans un environnement isolé et reproductible.  
 **Utilité en DevOps** : garantir la cohérence entre les environnements de développement, test et production.
 
-### 139. Qu’est-ce qu’un test unitaire ?
+#### 139. Qu’est-ce qu’un test unitaire ?
 Un test unitaire est un test automatisé qui vérifie qu’une unité de code (généralement une fonction ou une méthode) fonctionne correctement de manière isolée.
 
-### 140. Quelle est l'unité de code testée lors d'un test unitaire ?
+#### 140. Quelle est l'unité de code testée lors d'un test unitaire ?
 L’unité de code testée est une fonction, une méthode ou une classe.
 
-### 141. Quelles sont les caractéristiques d'un bon test unitaire ?
+#### 141. Quelles sont les caractéristiques d'un bon test unitaire ?
 - Rapide à exécuter  
 - Indépendant des autres tests  
 - Répétable dans tous les environnements  
 - Lisible et simple  
 - Couvre un cas précis et unique
 
-### 142. Qu'est-ce qu'une assertion dans un test unitaire ?
+#### 142. Qu'est-ce qu'une assertion dans un test unitaire ?
 Une assertion est une instruction qui vérifie qu’un résultat obtenu correspond au résultat attendu. Elle détermine si le test passe ou échoue.
 
  
