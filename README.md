@@ -534,16 +534,200 @@ h.	Concaténer 2 chaînes de caractères
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
 
 ## Sécurité
-94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
-95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
-96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
-97.	Définir l’attaque par force brute et l’attaque par dictionnaire
-98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
-99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
-100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
-101.	Qu’est-ce qu’une politique de mots de passe forts ?
-102.	Qu’est-ce que l’hameçonnage ?
-103.	Définir la « validation des entrées »
+### 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+L’injection SQL est une attaque qui consiste à insérer du code SQL malveillant dans des champs de formulaire ou paramètres d'URL, dans le but de manipuler la base de données (extraction, suppression ou modification de données).
+####  Bonnes pratiques pour s’en prémunir :
+- Ne jamais insérer directement les données utilisateur dans une requête SQL.
+- Utiliser un ORM (Doctrine pour Symfony, Eloquent pour Laravel) ou des requêtes préparées.
+
+#### Exemple avec Symfony (Doctrine) :
+```php
+<?php
+$qb = $entityManager->createQueryBuilder();
+$qb->select('u')
+   ->from(User::class, 'u')
+   ->where('u.email = :email')
+   ->setParameter('email', $email);
+```
+
+#### Exemple avec Laravel (Eloquent) :
+```php
+<?php
+$user = User::where('email', $email)->first();
+```
+
+> Ces méthodes permettent de sécuriser les interactions avec la base de données en liant les paramètres et en empêchant toute exécution de code malveillant.
+
+---
+
+### 95. Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+La faille XSS (Cross-Site Scripting) permet à un attaquant d’injecter du code JavaScript malveillant dans une page web, pouvant compromettre la sécurité des utilisateurs.
+#### Bonnes pratiques :
+-  Échapper toutes les données affichées dans les vues.
+-  Filtrer et valider les entrées utilisateur.
+
+#### Exemple avec Symfony (Twig) :
+```php
+{{ user.name }} {# échappement automatique avec Twig #}
+```
+
+#### Exemple avec Laravel (Blade) :
+```php
+{{ $user->name }} {# échappement automatique avec Blade #}
+```
+
+---
+
+### 96. Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+
+Le CSRF (Cross-Site Request Forgery) est une attaque qui pousse un utilisateur authentifié à exécuter une action non désirée sur une application dans laquelle il est connecté.
+#### Bonnes pratiques :
+- Intégrer un token CSRF dans chaque formulaire.
+- Vérifier ce token côté serveur.
+
+#### Exemple avec Symfony :
+```php
+<input type="hidden" name="_token" value="{{ csrf_token('action_name') }}">
+```
+
+#### Exemple avec Laravel :
+```php
+<form method="POST">
+    @csrf
+</form>
+```
+
+---
+
+### 97. Définir l’attaque par force brute et l’attaque par dictionnaire
+- **Force brute** : consiste à tester toutes les combinaisons possibles de mots de passe.
+- **Attaque par dictionnaire** : consiste à tester une liste de mots de passe courants ou probables.
+#### Bonnes pratiques :
+- Limiter le nombre de tentatives de connexion.
+- Ajouter un délai entre les tentatives ou utiliser un captcha.
+- Activer l’authentification à double facteur (2FA).
+
+#### Exemple Laravel :
+```php
+Route::post('/login', [LoginController::class, 'login'])->middleware('throttle:5,1');
+```
+
+#### Exemple Symfony :
+Configurer le RateLimiter dans `security.yaml` pour restreindre les tentatives de connexion.
+
+---
+### 98. Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+Oui, voici quelques failles courantes et leur fonctionnement :
+
+#### Clickjacking
+> Technique consistant à piéger un utilisateur en plaçant une interface cachée (via un iframe) au-dessus d'un bouton visible, l'incitant à cliquer involontairement sur une action malveillante.
+**Prévention** :
+```http
+X-Frame-Options: DENY
+```
+
+#### Injection de commandes système (Command Injection)
+> Exploite des appels système vulnérables pour exécuter des commandes arbitraires sur le serveur.
+**Prévention** :
+- Ne jamais inclure d’entrée utilisateur directement dans une commande système.
+- Utiliser des fonctions sécurisées ou des bibliothèques spécifiques.
+
+#### Traversée de répertoires (Directory Traversal)
+> Permet d’accéder à des fichiers en dehors du répertoire prévu, via des chemins comme `../../etc/passwd`.
+**Prévention** :
+- Valider et restreindre les chemins d’accès.
+- Utiliser des chemins absolus contrôlés.
+
+#### Fuite d’erreurs applicatives
+> En mode développement, les messages d’erreur détaillés peuvent exposer la structure ou les failles de l’application.
+**Prévention** :
+- Désactiver l'affichage des erreurs en production (`APP_DEBUG=false`).
+- Utiliser des messages d'erreur génériques pour les utilisateurs finaux.
+
+### 99. À quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+- **Authentification** : permet de vérifier l’identité de l’utilisateur (ex : login/mot de passe).
+- **Autorisation** : permet de vérifier ce que l’utilisateur a le droit de faire (ex : accès admin).
+
+#### Exemple Symfony :
+```php
+$this->denyAccessUnlessGranted('ROLE_ADMIN');
+```
+
+#### Exemple Laravel :
+```php
+$this->authorize('update', $post);
+```
+
+---
+### 100. Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+Le **hachage** transforme un mot de passe en une chaîne illisible, non réversible. Cela empêche de stocker des mots de passe en clair dans la base de données.
+
+#### Algorithmes recommandés :
+- bcrypt
+- argon2 (recommandé)
+- scrypt
+
+#### Exemple Symfony (security.yaml) :
+```yaml
+password_hashers:
+    App\Entity\User:
+        algorithm: auto
+```
+
+#### Exemple Laravel :
+```php
+use Illuminate\Support\Facades\Hash;
+
+$user->password = Hash::make($request->password);
+```
+
+---
+### 101. Qu’est-ce qu’une politique de mots de passe forts ?
+
+Une politique de mots de passe forts impose des règles pour rendre les mots de passe difficiles à deviner ou à casser.
+
+#### Bonnes pratiques :
+- Minimum 12 caractères
+- Mélanger majuscules, minuscules, chiffres et caractères spéciaux
+- Interdire les mots trop simples ou évidents ("123456", "password")
+
+---
+
+### 102. Qu’est-ce que l’hameçonnage ?
+
+L’**hameçonnage** (ou phishing) est une attaque visant à obtenir des informations sensibles (mots de passe, données bancaires, etc.) en se faisant passer pour un tiers de confiance (banque, service client, etc.).
+
+#### Bonnes pratiques :
+- Sensibiliser les utilisateurs
+- Vérifier les URL, les certificats SSL
+- Ne jamais cliquer sur un lien non sollicité
+- Utiliser la double authentification (2FA)
+
+---
+
+### 103. Définir la validation des entrées
+
+La **validation des entrées** consiste à vérifier que les données envoyées par l’utilisateur sont correctes, sécurisées et attendues (type, format, taille, etc.).
+
+#### Exemple Symfony (Validator) :
+```php
+#[Assert\NotBlank]
+#[Assert\Email]
+public string $email;
+```
+
+#### Exemple Laravel (FormRequest) :
+```php
+public function rules()
+{
+    return [
+        'email' => ['required', 'email'],
+        'password' => ['required', 'min:8'],
+    ];
+}
+```
+
+---
 
 ## RGPD
 ### 104. Qu’est-ce que le RGPD ?
@@ -617,19 +801,61 @@ Le principe de **minimisation** impose que :
 ---
 
 ## SEO
-114.	Qu’est-ce que le SEO ? 
-115.	Quel est l’objectif principal du SEO ?
-116.	Existe-t-il plusieurs types de référencement ? Lesquels ?
-117.	Qu’est-ce que la densité de mots-clés en SEO ?
-118.	Qu’est-ce qu’une balise « alt » ?
-119.	Qu’est-ce que la balise « meta description » ?
-120.	Qu’est-ce que le « nofollow » en SEO ?
-121.	Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
-122.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
-123.	Quelle est la recommandation pour les URL d'un site web bien référencé ?
-124.	Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
-125.	Qu'est-ce que l'optimisation des images pour le référencement ?
-126.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+### 114. Qu’est-ce que le SEO ?
+Le SEO (Search Engine Optimization), ou référencement naturel, est un ensemble de techniques visant à améliorer la visibilité d’un site web dans les résultats des moteurs de recherche, comme Google, sans avoir à payer pour des publicités.
+
+### 115. Quel est l’objectif principal du SEO ?
+L’objectif principal est d’augmenter le trafic organique vers un site web, en le positionnant le plus haut possible dans les résultats de recherche sur des mots-clés pertinents.
+
+### 116. Existe-t-il plusieurs types de référencement ? Lesquels ?
+Oui, il existe trois principaux types de référencement :
+- **SEO (référencement naturel)** : amélioration de la visibilité organique.
+- **SEA (Search Engine Advertising)** : référencement payant via des annonces (ex. Google Ads).
+- **SMO (Social Media Optimization)** : optimisation via les réseaux sociaux.
+
+### 117. Qu’est-ce que la densité de mots-clés en SEO ?
+C’est le pourcentage d’occurrences d’un mot-clé par rapport au nombre total de mots sur une page. Une bonne densité permet d’indiquer aux moteurs de recherche la thématique de la page sans tomber dans la sur-optimisation.
+
+### 118. Qu’est-ce qu’une balise « alt » ?
+La balise `alt` est une alternative textuelle pour les images. Elle décrit le contenu d’une image et est utile à la fois pour l’accessibilité (lecteurs d’écran) et pour le SEO (Google ne "voit" pas les images mais lit leur description).
+
+### 119. Qu’est-ce que la balise « meta description » ?
+C’est une balise HTML qui fournit un résumé du contenu d’une page. Elle s’affiche souvent sous le titre de la page dans les résultats de recherche. Elle n’influence pas directement le positionnement, mais peut améliorer le taux de clic.
+
+### 120. Qu’est-ce que le « nofollow » en SEO ?
+C’est un attribut HTML ajouté à un lien (`rel="nofollow"`) qui indique aux moteurs de recherche de ne pas transférer de "jus de lien" (link juice) et de ne pas suivre ce lien. Cela peut être utile pour éviter de référencer certains liens.
+
+### 121. Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+Un contenu de qualité est essentiel : il attire les utilisateurs, répond à leurs intentions de recherche, réduit le taux de rebond et améliore le temps passé sur le site. Google favorise les contenus pertinents, bien structurés, et régulièrement mis à jour.
+
+### 122. Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+Les balises de titre structurent le contenu pour les moteurs de recherche et les utilisateurs. Elles hiérarchisent l'information, facilitent la lecture, et aident à comprendre les sujets abordés sur la page. Cela améliore l’indexation et le SEO.
+
+### 123. Quelle est la recommandation pour les URL d'un site web bien référencé ?
+Une bonne URL SEO est :
+- Courte et descriptive
+- Lisible (sans caractères spéciaux ou chiffres inutiles)
+- Contient des mots-clés pertinents
+- Séparée par des tirets (`-`) pour les espaces
+
+Exemple : `www.monsite.com/seo-bonnes-pratiques`
+
+### 124. Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+Le maillage interne consiste à lier les pages d’un même site entre elles. Cela permet :
+- De mieux structurer le site
+- De répartir le jus de lien
+- De faciliter la navigation pour l’utilisateur et les robots de Google
+
+### 125. Qu'est-ce que l'optimisation des images pour le référencement ?
+C’est un ensemble de pratiques pour que les images n’impactent pas négativement les performances du site :
+- Utiliser des fichiers légers (compressés)
+- Ajouter des balises `alt` descriptives
+- Nommer les fichiers avec des mots-clés pertinents
+- Utiliser des formats modernes (WebP)
+
+### 126. Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+Un **sitemap** est un fichier XML qui liste toutes les pages importantes d’un site. Il aide les moteurs de recherche à explorer et indexer plus efficacement les pages du site, en particulier celles moins accessibles via la navigation classique.
+
 
 ## Gestion de projets - DevOps
 127.	Qu’est-ce que la gestion de projet ?	
