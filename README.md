@@ -546,16 +546,75 @@ h.	Concaténer 2 chaînes de caractères
 103.	Définir la « validation des entrées »
 
 ## RGPD
-104.	Qu’est-ce que le RGPD ?
-105.	Quel est son objectif principal ?
-106.	Quelle est la date d’entrée en vigueur du RGPD ?
-107.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
-108.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
-109.	Quel est le consentement valide selon le RPGD ?
-110.	Qu’est-ce qu’une politique de confidentialité ?
-111.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
-112.	Quels sont les droits des utilisateurs selon le RGPD ?
-113.	Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+### 104. Qu’est-ce que le RGPD ?
+Le **RGPD** (Règlement Général sur la Protection des Données) est un **texte de droit européen** à **force obligatoire**, entré en vigueur le **25 mai 2018**, visant à encadrer le traitement et la circulation des données à caractère personnel dans l’Union européenne. Il remplace une directive de 1995.
+
+
+### 105. Quel est son objectif principal ?
+L'objectif principal du RGPD est :
+- **d'harmoniser** la législation entre les pays de l’UE,
+- **de responsabiliser** les acteurs (entreprises, États, agences, ONG...),
+- et **de renforcer la confiance des citoyens** dans la manière dont leurs données personnelles sont collectées, stockées et utilisées.
+
+
+### 106. Quelle est la date d’entrée en vigueur du RGPD ?
+Le RGPD est **obligatoire dans toute l’Union européenne depuis le 25 mai 2018**.
+
+
+### 107. Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+Le non-respect du RGPD peut entraîner :
+- **des mises en demeure**,
+- **des amendes administratives** (jusqu'à **20 millions d’euros** ou **4% du chiffre d'affaires mondial annuel**),
+- **des sanctions pénales**,
+- **des injonctions sous astreinte**,
+- et même **la fermeture d’une entreprise**.
+
+
+### 108. En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+Il s’agit de la **CNIL** (Commission Nationale de l’Informatique et des Libertés), première autorité administrative indépendante créée en 1978. Elle contrôle, informe, accompagne, et peut sanctionner les entités qui ne respectent pas la législation sur les données personnelles.
+
+
+### 109. Quel est le consentement valide selon le RGPD ?
+Un consentement est valide s’il est :
+- **libre**,
+- **éclairé**, 
+- **spécifique**,
+- et **univoque**.
+Il doit être exprimé clairement (ex : case à cocher non pré-cochée) et peut être retiré à tout moment.
+
+
+### 110. Qu’est-ce qu’une politique de confidentialité ?
+Une **politique de confidentialité** est un document qui **informe les utilisateurs** de la manière dont leurs données personnelles sont collectées, utilisées, conservées, partagées, ainsi que de leurs **droits** (accès, rectification, effacement, etc.). Elle est **obligatoire** pour tout site ou service collectant des données.
+
+
+### 111. Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+Le RGPD ne fixe pas une durée unique, mais impose que les données soient :
+- **conservées uniquement pendant une durée justifiée** par la finalité du traitement,
+- **supprimées ou anonymisées** une fois cette durée dépassée.
+
+**Exemple :** un CV ne peut être conservé que **2 ans** par un employeur sans nouvelle interaction avec le candidat.
+
+
+### 112. Quels sont les droits des utilisateurs selon le RGPD ?
+Les utilisateurs disposent de plusieurs droits :
+- **Droit d’information**
+- **Droit d’accès**
+- **Droit de rectification**
+- **Droit à l’effacement** (droit à l’oubli)
+- **Droit à la portabilité des données**
+- **Droit d’opposition**
+- **Droit à la limitation du traitement**
+- **Droit à la prise de décision automatisée** (ex : s’opposer à une décision prise uniquement par un algorithme)
+
+
+### 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+Le principe de **minimisation** impose que :
+- Seules les **données strictement nécessaires** à la finalité du traitement soient collectées.
+- Aucune donnée ne doit être collectée "au cas où".
+
+**Exemple :** sur un formulaire de contact, il est **illégal de demander l’adresse postale** si elle n’est pas nécessaire pour traiter la demande.
+
+---
 
 ## SEO
 114.	Qu’est-ce que le SEO ? 
