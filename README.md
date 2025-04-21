@@ -702,53 +702,147 @@ Les **APIs RESTful** sont largement utilisées car elles sont simples à implém
 
 
 ## Modélisation - Base de données
-67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
-68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
-a.	Analyse, conception et réalisation
-b.	Planification, exécution et contrôle
-c.	Création, modification et suppression
-69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
-70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
-71.	Donner la définition des mots suivants :
-a.	Entité
-b.	Relation
-c.	Cardinalité
-d.	Clé primaire / clé étrangère
-72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
-73.	Qu’est-ce qu’une base de données ?
-74.	Définir les notions suivantes : 
-a.	SQL
-b.	MySQL
-c.	SGBD (donner 2 exemples de SGBD)
-75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
-76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
-77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
-78.	A quoi sert une vue dans une base de données ?
-79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
-80.	Quelles sont les fonctions d’agrégation en SQL ?
-81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
-82.	Quelles sont les clauses qui permettent de :
-a.	Insérer un nouvel enregistrement dans une table
-b.	Modifier un enregistrement dans une table
-c.	Supprimer un enregistrement dans une table
-d.	Supprimer la base de données
-e.	Filtrer les résultats d’une requête SQL
-f.	Trier les résultats d’une requête SELECT
-g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
-h.	Concaténer 2 chaînes de caractères 
-83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+
+#### 67. Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+La **modélisation de données** est le processus de structuration et de représentation des données d'un système d'information sous forme de schémas ou de modèles.  
+La **méthode Merise** est une méthode d'analyse, de conception et de gestion des systèmes d'information. Elle permet de modéliser les données (MCD, MLD, MPD) et les traitements (organigrammes, modèles de flux) de manière indépendante.
+
+#### 68. Quelles sont les 3 étapes principales de la méthode Merise ?
+**Réponse : a. Analyse, conception et réalisation**
+
+#### 69. Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+Le **MCD** est une représentation abstraite des données du système. Il décrit les entités, les relations entre elles, et leurs cardinalités, sans se préoccuper de la façon dont elles seront stockées.
+
+#### 70. Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+Le **MLD** est la traduction du MCD en un modèle plus proche des bases de données relationnelles. Il définit les tables, les attributs, les clés primaires et étrangères, et la structure logique des relations.
+
+#### 71. Définitions
+- **Entité** : Un objet ou concept représenté dans la base (ex. : Client, Produit).  
+- **Relation** : Un lien entre deux ou plusieurs entités (ex. : "possède", "commande").  
+- **Cardinalité** : Indique le nombre minimum et maximum d’occurrences d’une entité pouvant participer à une relation.  
+- **Clé primaire** : Identifiant unique d’une ligne dans une table.  
+- **Clé étrangère** : Attribut qui référence la clé primaire d’une autre table, pour établir une relation.
+
+#### 72. Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+Elle devient **une table intermédiaire** (ou table de jointure) contenant **au minimum deux clés étrangères** pointant vers les entités reliées.
+
+#### 73. Qu’est-ce qu’une base de données ?
+C’est un **ensemble structuré d’informations** stockées de manière persistante, permettant leur manipulation via un langage comme le SQL.
+
+#### 74. Définitions
+- **SQL** : Structured Query Language, langage pour interagir avec une base de données (requêtes, insertions, etc.).  
+- **MySQL** : Système de gestion de base de données relationnelle open source, utilisant SQL.  
+- **SGBD** : Système de Gestion de Base de Données, outil permettant de créer, manipuler et gérer les bases (ex : **MySQL**, **PostgreSQL**).
+
+#### 75. Complétez :
+> Dans une base de données, les données sont stockées dans des **tables**. Celles-ci sont constituées de lignes appelées **enregistrements** et de colonnes appelées **champs**.
+
+#### 76. Différence entre base relationnelle et non relationnelle :
+- **Relationnelle** : données organisées en **tables liées entre elles** (ex : MySQL, PostgreSQL).  
+- **Non relationnelle (NoSQL)** : données sous forme **de documents, graphes, colonnes ou paires clé/valeur** (ex : MongoDB, Redis).
+
+#### 77. Qu’est-ce qu’une jointure dans une base de données ? Types ?
+Une **jointure** permet de lier des données issues de plusieurs tables.  
+Types de jointures :  
+- **INNER JOIN** : ne retourne que les correspondances.  
+- **LEFT JOIN / RIGHT JOIN** : retourne toutes les lignes de la table de gauche / droite, même sans correspondance.  
+- **FULL OUTER JOIN** : toutes les lignes, qu’il y ait correspondance ou non.  
+- **CROSS JOIN** : produit cartésien (toutes les combinaisons possibles).
+
+#### 78. A quoi sert une vue dans une base de données ?
+Une **vue** est une requête **enregistrée** qui permet d'afficher un jeu de résultats comme une table virtuelle, sans dupliquer les données.
+
+#### 79. Qu’est-ce que l’intégrité référentielle ?
+C’est une **règle garantissant la cohérence des relations** entre les tables. Une clé étrangère doit toujours pointer vers une valeur existante dans la table référencée.
+
+#### 80. Fonctions d’agrégation en SQL :
+- `COUNT()` : nombre de lignes  
+- `SUM()` : somme  
+- `AVG()` : moyenne  
+- `MAX()` / `MIN()` : valeur max / min
+
+#### 81. Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+**CRUD** = **Create, Read, Update, Delete**  
+Ce sont les **4 opérations principales** qu’on effectue sur les données.
+
+#### 82. Clauses SQL
+- a. `INSERT INTO`  
+- b. `UPDATE`  
+- c. `DELETE`  
+- d. `DROP DATABASE`  
+- e. `WHERE`  
+- f. `ORDER BY`  
+- g. `GROUP BY`  
+- h. `CONCAT()` (ex: `CONCAT(nom, ' ', prenom)`)
+
+#### 83. Comment se connecter à une base de données en PHP ? Classe native utilisée ?
+La classe native est **PDO** (PHP Data Objects).  
+Exemple :
+```php
+$pdo = new PDO('mysql:host=localhost;dbname=ma_base', 'utilisateur', 'motdepasse');
+```
+---
 
 ## Symfony
-84.	Qu’est-ce que Symfony ?
-85.	Sur quel langage de programmation et design pattern repose Symfony ? 
-86.	Quelle est la dernière version en date de Symfony ?
-87.	Qu’est-ce qu’un bundle ? 
-88.	Quel est le moteur de template utilisé par défaut dans Symfony ?
-89.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
-90.	Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
-91.	Que permet le bundle Maker au sein de Symfony ? 
-92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
-93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+
+#### 84. Qu’est-ce que Symfony ?
+Symfony est un **framework PHP** open source basé sur le **Modèle-Vue-Contrôleur (MVC)**. Il fournit une structure robuste et réutilisable pour développer des applications web de manière rapide, évolutive et maintenable.
+
+
+#### 85. Sur quel langage de programmation et design pattern repose Symfony ?
+- **Langage** : PHP  
+- **Design pattern** : Principalement le **MVC**, mais aussi **l’injection de dépendances**, le **routing**, et des patterns orientés objet comme le **Repository Pattern**.
+
+
+#### 86. Quelle est la dernière version en date de Symfony ?
+La dernière version stable de Symfony est **Symfony 7.2.3**.
+
+
+#### 87. Qu’est-ce qu’un bundle ?
+Un **bundle** dans Symfony est un **package modulaire** regroupant des fichiers PHP, configurations, contrôleurs, vues, etc. C’est l’équivalent d’un plugin ou module. Symfony lui-même est composé de bundles.
+
+
+#### 88. Quel est le moteur de template utilisé par défaut dans Symfony ?
+Le moteur de template par défaut est **Twig**.
+
+
+#### 89. Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
+- **ORM** : Object-Relational Mapping  
+- **Utilité** : Manipulation de la base de données via des objets PHP sans écrire de SQL natif.  
+- **Dans Symfony** : c’est **Doctrine ORM**.
+
+
+#### 90. Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé et quel fichier contient les dépendances ?
+- **Injection de dépendances** : Fournir les dépendances d’un objet au moment de son instanciation. Favorise la modularité et les tests.  
+- **Outil** : Le **conteneur de services** de Symfony.  
+- **Fichier** : `composer.json` contient les dépendances du projet.
+
+
+#### 91. Que permet le bundle Maker au sein de Symfony ?
+Le **MakerBundle** permet de **générer automatiquement du code** via des commandes CLI : contrôleurs, entités, formulaires, etc.
+
+Exemple :
+```bash
+php bin/console make:controller
+```
+
+
+#### 92. Quel est le langage de requêtage exploité dans Symfony ?
+Symfony (via Doctrine) utilise le **DQL (Doctrine Query Language)**, un langage orienté objet proche du SQL.
+
+Exemple :
+```php
+$em->createQuery('SELECT u FROM App\\Entity\\User u WHERE u.email = :email');
+```
+
+#### 93. Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+Le composant **Security** de Symfony, qui gère :
+- **L’authentification** (connexion, session, firewall),
+- **L’autorisation** (rôles, accès).
+
+Configuration via `security.yaml`.
+
+---
 
 ## Sécurité
 #### 94. Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
