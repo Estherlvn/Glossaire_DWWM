@@ -388,27 +388,249 @@ Contrairement au principe de Responsive, cette approche adapte le design pour le
 
 
 ## Programmation orientée objet (POO)
-43.	Donner une définition de la programmation orientée objet 
-44.	Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
-45.	Qu’est-ce qu’un objet ?
-46.	Définir la notion de propriété / attribut / méthode
-47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
-48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
-49.	Qu’est-ce que l’encapsulation ?
-50.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
-51.	Définir l’opérateur de résolution de portée
-52.	Définir une méthode / propriété statique
-53.	Définir le polymorphisme en POO
-54.	Définir une méthode / classe abstraite ?
-55.	Définir le chaînage de méthodes
-56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
-57.	Qu’est-ce qu’un « autoload » ?
-58.	Comment appelle-t-on en français les « getters » et les « setters » ?
-59.	Qu’est-ce que la sérialisation en PHP ? 
+
+### 43. Donner une définition de la programmation orientée objet
+La programmation orientée objet (POO) est un paradigme de programmation structurant le code autour de **classes** et **d’objets**, représentant des entités du monde réel. Elle permet de regrouper des données (attributs) et des comportements (méthodes) dans un même bloc logique. Elle favorise la **réutilisabilité**, la **modularité**, la **testabilité** et la **maintenabilité** du code.
+
+---
+
+### 44. Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
+Une **classe** est un modèle (ou un plan) permettant de créer des objets. Elle définit un ensemble d’attributs (propriétés) et de comportements (méthodes) communs à toutes ses instances.
+
+#### Exemple en PHP :
+```php
+class Voiture {
+    public $marque;
+    public function klaxonner() {
+        return "Bip bip !";
+    }
+}
+```
+
+---
+
+### 45. Qu’est-ce qu’un objet ?
+
+Un **objet** est une instance d’une classe, c’est-à-dire une représentation concrète de la classe avec ses propres valeurs pour chaque attribut.
+
+```php
+$maVoiture = new Voiture();
+$maVoiture->marque = "Peugeot";
+```
+
+---
+
+### 46. Définir la notion de propriété / attribut / méthode
+
+- **Propriété (ou attribut)** : une variable appartenant à une classe et décrivant une caractéristique de l’objet.
+- **Méthode** : une fonction définie dans une classe et décrivant un comportement de l’objet.
+
+```php
+class Exemple {
+    public $nom; // propriété
+    public function direBonjour() { // méthode
+        return "Bonjour !";
+    }
+}
+```
+
+---
+
+### 47. Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
+La **visibilité** détermine les endroits depuis lesquels une propriété ou méthode peut être utilisée dans le code.
+
+- `public` : accessible depuis n’importe où (extérieur, classe, héritiers)
+- `protected` : accessible uniquement dans la classe et ses classes enfants
+- `private` : accessible uniquement dans la classe elle-même
+
+---
+
+### 48. Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
+La méthode spéciale `__construct()` est appelée automatiquement lors de l’instanciation d’un objet. Elle sert à **initialiser** les propriétés de l’objet.
+
+```php
+class Utilisateur {
+    public $nom;
+    public function __construct($nom) {
+        $this->nom = $nom;
+    }
+}
+```
+
+---
+
+### 49. Qu’est-ce que l’encapsulation ?
+L’**encapsulation** est un principe qui consiste à protéger les données d’un objet en limitant leur accès direct. Cela passe par l’utilisation de propriétés privées et de méthodes publiques (`getters` et `setters`) pour contrôler leur lecture ou modification.
+
+---
+
+### 50. Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
+Étendre une classe signifie créer une **classe fille** qui hérite des attributs et méthodes d’une **classe parent**.
+
+Concept clé : **héritage**
+
+```php
+class Animal {
+    public function parler() {
+        return "Je fais un bruit";
+    }
+}
+
+class Chien extends Animal {
+    public function parler() {
+        return "Ouaf !";
+    }
+}
+```
+
+---
+
+### 51. Définir l’opérateur de résolution de portée
+L’opérateur `::` permet d’accéder à des éléments **statiques**, des **constantes de classe**, ou à une méthode de la classe parente (`parent::`).
+
+```php
+MaClasse::maMethodeStatique();
+parent::maMethode();
+```
+
+---
+
+### 52. Définir une méthode / propriété statique
+Une propriété ou méthode **statique** est liée à la **classe** elle-même et non à ses instances. Elle est accessible sans créer d’objet.
+
+```php
+class Outils {
+    public static $version = "1.0";
+    public static function aide() {
+        return "Aide de l'application";
+    }
+}
+
+Outils::aide();
+```
+
+---
+
+### 53. Définir le polymorphisme en POO
+Le **polymorphisme** permet à différentes classes de répondre à un même message (appel de méthode) de manière différente. Il repose sur la **surcharge** ou la **redéfinition** de méthodes héritées.
+
+```php
+class Animal {
+    public function parler() {
+        return "Je suis un animal";
+    }
+}
+
+class Chat extends Animal {
+    public function parler() {
+        return "Miaou";
+    }
+}
+```
+
+---
+
+### 54. Définir une méthode / classe abstraite ?
+- Une **classe abstraite** sert de base pour d'autres classes. Elle ne peut pas être instanciée.
+- Une **méthode abstraite** est une méthode sans corps, que les classes dérivées doivent implémenter.
+
+```php
+abstract class Forme {
+    abstract public function aire();
+}
+
+class Cercle extends Forme {
+    public function aire() {
+        return 3.14 * $this->rayon ** 2;
+    }
+}
+```
+
+---
+
+### 55. Définir le chaînage de méthodes
+Le chaînage de méthodes consiste à retourner l’objet courant (`$this`) dans chaque méthode pour pouvoir appeler plusieurs méthodes à la suite.
+
+```php
+class Chaîne {
+    public function a() {
+        echo "A ";
+        return $this;
+    }
+    public function b() {
+        echo "B";
+        return $this;
+    }
+}
+
+$obj = new Chaîne();
+$obj->a()->b();
+```
+
+---
+
+### 56. Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques » ?
+La méthode `__toString()` est appelée automatiquement lorsqu’un objet est utilisé comme une chaîne de caractères (ex : `echo $objet`).
+
+```php
+public function __toString() {
+    return $this->nom;
+}
+```
+
+Autres méthodes magiques en PHP :
+- `__construct()`, `__destruct()`
+- `__get()`, `__set()`
+- `__call()`, `__callStatic()`
+- `__isset()`, `__unset()`
+
+---
+
+### 57. Qu’est-ce qu’un « autoload » ?
+L’**autoload** permet de charger automatiquement les fichiers de classe lorsqu’on instancie un objet, évitant ainsi les `require` manuels.
+
+#### Exemple simple avec `spl_autoload_register()` :
+```php
+spl_autoload_register(function($class) {
+    require_once "classes/" . $class . ".php";
+});
+```
+
+Avec Composer, l’autoload est géré via `autoload` dans le `composer.json`.
+
+---
+
+### 58. Comment appelle-t-on en français les « getters » et les « setters » ?
+- **Getter** : accesseur → permet de lire la valeur d’un attribut privé
+- **Setter** : mutateur → permet de modifier la valeur d’un attribut privé
+
+```php
+public function getNom() {
+    return $this->nom;
+}
+
+public function setNom($nom) {
+    $this->nom = $nom;
+}
+```
+
+---
+
+### 59. Qu’est-ce que la sérialisation en PHP ?
+La **sérialisation** est le processus de conversion d’un objet en une chaîne de caractères pour le stocker ou le transmettre. La **désérialisation** est l’opération inverse.
+
+#### Exemple :
+```php
+$objet = new MaClasse();
+$chaine = serialize($objet);
+$objetRestauré = unserialize($chaine);
+```
+
+Utilisations : stockage en session, persistance temporaire, cache, etc.
+
 
 ## Architecture 
 ### 60. Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
-
 L'**architecture client/serveur** est un modèle d'organisation des applications où deux entités principales interagissent : un **client** (qui envoie des requêtes) et un **serveur** (qui traite les requêtes et renvoie des réponses).
 
 Les clients peuvent interroger le serveur via des requêtes de type **HTTP (HyperText Transfer Protocol)**. Lorsqu’on ajoute un **S** (ce qui donne **HTTPS**), cela signifie que les données échangées sont **sécurisées par un chiffrement SSL/TLS**. Cela permet de protéger les informations sensibles pendant leur transmission.
@@ -416,7 +638,6 @@ Les clients peuvent interroger le serveur via des requêtes de type **HTTP (Hype
 ---
 
 ### 61. Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
-
 Un **design pattern (ou modèle de conception)** est une **solution réutilisable à un problème courant** rencontré lors de la conception logicielle. Les design patterns permettent de **standardiser les bonnes pratiques** de programmation, en facilitant la maintenance, l'évolutivité et la lisibilité du code.
 
 **Exemples de design patterns :**
