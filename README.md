@@ -790,7 +790,6 @@ Les utilisateurs disposent de plusieurs droits :
 - **Droit à la limitation du traitement**
 - **Droit à la prise de décision automatisée** (ex : s’opposer à une décision prise uniquement par un algorithme)
 
-
 ### 113. Qu’est-ce que le principe de minimisation des données selon le RGPD ?
 Le principe de **minimisation** impose que :
 - Seules les **données strictement nécessaires** à la finalité du traitement soient collectées.
@@ -858,53 +857,94 @@ Un **sitemap** est un fichier XML qui liste toutes les pages importantes d’un 
 
 
 ## Gestion de projets - DevOps
-127.	Qu’est-ce que la gestion de projet ?	
-128.	Qu’est-ce qu’une méthode Agile de gestion de projet ? 
-129.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
-130.	A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
-131.	Qu’est-ce que la planification itérative ?
-132.	Citer 3 méthodes Agiles dans le cadre d’un projet informatique
-133.	Qu’est-ce qu’une réunion de revue de projet ?
-134.	Qu’est-ce qu’un livrable dans un projet ? 
-135.	Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
-136.	Qu’est-ce que le DevOps et quel est son objectif principal ?
-137.	Qu’est-ce que l’intégration continue ? 
-138.	Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
-139.	Qu’est-ce qu’un test unitaire ? 
-140.	Quelle est l'unité de code testée lors d'un test unitaire ?
-141.	Quelles sont les caractéristiques d'un bon test unitaire ?
-142.	Qu'est-ce qu'une assertion dans un test unitaire ?
+
+### 127. Qu’est-ce que la gestion de projet ?
+La gestion de projet est l'ensemble des activités visant à organiser, planifier et contrôler le bon déroulement d’un projet afin d’atteindre des objectifs précis dans les délais, le budget et les ressources impartis.
+
+### 128. Qu’est-ce qu’une méthode Agile de gestion de projet ?
+Une méthode Agile est une approche de gestion de projet itérative et incrémentale qui favorise l’adaptabilité, la collaboration, la livraison rapide et continue de fonctionnalités utiles au client.
+
+### 129. Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
+La méthode MoSCoW est une technique de hiérarchisation des exigences :  
+- **Must have** (indispensable)  
+- **Should have** (important)  
+- **Could have** (optionnel)  
+- **Won’t have** (hors scope)  
+
+**Avantages** : meilleure gestion des attentes, clarté des priorités, et optimisation des ressources.
+
+### 130. A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
+La méthodologie MVP (Minimum Viable Product) sert à développer une version minimale mais fonctionnelle d’un produit pour tester rapidement son potentiel auprès des utilisateurs.  
+**Caractéristiques clés** : développement rapide, retour utilisateur précoce, réduction des risques.
+
+### 131. Qu’est-ce que la planification itérative ?
+La planification itérative consiste à découper un projet en cycles courts (itérations), permettant une planification évolutive à chaque fin de cycle selon les retours et les changements constatés.
+
+### 132. Citer 3 méthodes Agiles dans le cadre d’un projet informatique
+- **Scrum**  
+- **Kanban**  
+- **Extreme Programming (XP)**
+
+### 133. Qu’est-ce qu’une réunion de revue de projet ?
+C’est une réunion planifiée où l’équipe projet présente l’avancement, les livrables réalisés, les blocages et les prochaines étapes aux parties prenantes. Elle permet d’ajuster les objectifs si nécessaire.
+
+### 134. Qu’est-ce qu’un livrable dans un projet ?
+Un livrable est un résultat concret attendu à la fin d'une phase du projet, pouvant être un document, une fonctionnalité, une application, etc. Il est validé et remis au client ou au commanditaire.
+
+### 135. Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+- **Transparence** : les informations importantes doivent être visibles et comprises par tous.  
+- **Inspection** : les artefacts Scrum et les progrès doivent être régulièrement vérifiés.  
+- **Adaptation** : les processus doivent être ajustés en fonction des inspections pour améliorer la performance.
+
+### 136. Qu’est-ce que le DevOps et quel est son objectif principal ?
+Le DevOps est une approche qui vise à rapprocher les équipes de développement (Dev) et d’exploitation (Ops) afin de livrer plus rapidement, plus fréquemment et de manière plus fiable des applications.  
+**Objectif principal** : automatiser et optimiser le cycle de vie du logiciel.
+
+### 137. Qu’est-ce que l’intégration continue ?
+L’intégration continue est une pratique consistant à intégrer fréquemment (plusieurs fois par jour) le code développé dans un référentiel central et à tester automatiquement cette intégration pour détecter les erreurs le plus tôt possible.
+
+### 138. Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+Docker est un outil de virtualisation légère basé sur des conteneurs. Il permet d’emballer une application avec ses dépendances dans un environnement isolé et reproductible.  
+**Utilité en DevOps** : garantir la cohérence entre les environnements de développement, test et production.
+
+### 139. Qu’est-ce qu’un test unitaire ?
+Un test unitaire est un test automatisé qui vérifie qu’une unité de code (généralement une fonction ou une méthode) fonctionne correctement de manière isolée.
+
+### 140. Quelle est l'unité de code testée lors d'un test unitaire ?
+L’unité de code testée est une fonction, une méthode ou une classe.
+
+### 141. Quelles sont les caractéristiques d'un bon test unitaire ?
+- Rapide à exécuter  
+- Indépendant des autres tests  
+- Répétable dans tous les environnements  
+- Lisible et simple  
+- Couvre un cas précis et unique
+
+### 142. Qu'est-ce qu'une assertion dans un test unitaire ?
+Une assertion est une instruction qui vérifie qu’un résultat obtenu correspond au résultat attendu. Elle détermine si le test passe ou échoue.
+
  
 ## English
-1)	What does JavaScript enable you to do on a website ?
-a.	Add interactive behavior and dynamic content
-b.	Define the layout and design of web pages
-c.	Handle server-side operations
-2)	Which programming language is primarily used for server-side web development ?
-a.	PHP
-b.	JavaScript
-c.	HTML
-3)	What is the purpose of a web browser ?
-a.	To render and display web pages
-b.	To execute serve-side code
-c.	To manage databases
-4)	What is the difference between GET and POST methods in HTTP ?
-a.	GET retrieves data from a server, while POST submits data to a server
-b.	GET submits data to a server, while POST retrieves data from a server
-c.	GET and POST methods are interchangeable
-5)	What is the purpose of version control systems (e.g., Git) in web development ?
-a.	To track changes and manage collaborative development
-b.	To optimize website loading speed
-c.	To handle server-side scripting
-6)	What is the purpose of a framework in web development ?
-a.	To provide a structured environment for building web applications
-b.	To handle network protocols and data transfer
-c.	To create visual designs and layouts for websites
-7)	What does NoSQL stand for ?
-a.	Not Only SQL
-b.	Non-Structured Query Language
-c.	New Object-Oriented Language
-8)	Which of the following is a characteristic of NoSQL databases ?
-a.	Strict schema enforcement
-b.	Support for complex transactions
-c.	Scalability and flexible data models
+1) **What does JavaScript enable you to do on a website ?**  
+a. Add interactive behavior and dynamic content
+
+2) **Which programming language is primarily used for server-side web development ?**  
+a. PHP
+
+3) **What is the purpose of a web browser ?**  
+a. To render and display web pages
+
+4) **What is the difference between GET and POST methods in HTTP ?**  
+a. GET retrieves data from a server, while POST submits data to a server
+
+5) **What is the purpose of version control systems (e.g., Git) in web development ?**  
+a. To track changes and manage collaborative development
+
+6) **What is the purpose of a framework in web development ?**  
+a. To provide a structured environment for building web applications
+
+7) **What does NoSQL stand for ?**  
+a. Not Only SQL
+
+8) **Which of the following is a characteristic of NoSQL databases ?**  
+c. Scalability and flexible data models
